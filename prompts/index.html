@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light dark">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Промпти для візуалу A.L.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Onest:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --paper:#F8F5F1; --surface:#FFFFFF; --surface-2:#EFE9E1;
+    --ink:#26211C; --ink-soft:#5E564E; --ink-faint:#9A9188; --rule:#E2DAD0;
+    --accent:#8A6A4F; --accent-dim:#C4A88C;
+    --good:#3D6B55; --good-bg:#E8F0EA; --warn:#9A6B22; --warn-bg:#F8F0E1;
+    --crit:#A6382F; --crit-bg:#F9E7E4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:#16130F; --surface:#1F1B16; --surface-2:#2A241D;
+      --ink:#F1ECE4; --ink-soft:#B7AEA3; --ink-faint:#877E73; --rule:#342D25;
+      --accent:#C99C72; --accent-dim:#7A6047;
+      --good:#8EC2A4; --good-bg:#1F2D25; --warn:#D8AB63; --warn-bg:#2F261A;
+      --crit:#EA8B80; --crit-bg:#34211E;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:#16130F; --surface:#1F1B16; --surface-2:#2A241D;
+    --ink:#F1ECE4; --ink-soft:#B7AEA3; --ink-faint:#877E73; --rule:#342D25;
+    --accent:#C99C72; --accent-dim:#7A6047;
+    --good:#8EC2A4; --good-bg:#1F2D25; --warn:#D8AB63; --warn-bg:#2F261A;
+    --crit:#EA8B80; --crit-bg:#34211E;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: "Onest", system-ui, sans-serif; font-size: 16.5px; line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 22px 110px; }
+
+  header { padding: 66px 0 36px; border-bottom: 1px solid var(--rule); margin-bottom: 30px; }
+  .kicker { font-family:"JetBrains Mono",monospace; font-size:10.5px; letter-spacing:.2em;
+    text-transform:uppercase; color:var(--accent); margin:0 0 18px; }
+  h1 { font-family:"Cormorant Garamond",Georgia,serif; font-weight:600;
+    font-size:clamp(34px,6vw,54px); line-height:1.04; margin:0 0 16px; }
+  .lede { font-size:17.5px; color:var(--ink-soft); font-weight:300; margin:0; max-width:600px; }
+
+  h2 { font-family:"Cormorant Garamond",Georgia,serif; font-weight:600;
+    font-size:clamp(25px,3.6vw,34px); margin:56px 0 6px; line-height:1.15;
+    display:flex; align-items:baseline; gap:12px; }
+  h2 .n { font-family:"JetBrains Mono",monospace; font-size:11.5px; color:var(--accent); flex:none; }
+  .sub { font-family:"JetBrains Mono",monospace; font-size:10px; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink-faint); margin:0 0 22px; }
+  h3 { font-size:16.5px; font-weight:600; margin:30px 0 10px; }
+  p { margin:0 0 16px; }
+  ul, ol { padding-left:21px; margin:0 0 16px; }
+  li { margin-bottom:8px; } li::marker { color:var(--accent-dim); }
+  strong { font-weight:600; }
+  code { font-family:"JetBrains Mono",monospace; font-size:13px;
+    background:var(--surface-2); padding:2px 6px; border-radius:2px; }
+
+  .pbox { border:1px solid var(--rule); background:var(--surface); margin:0 0 14px; }
+  .pbox-head {
+    display:flex; align-items:center; gap:10px; padding:11px 15px;
+    border-bottom:1px solid var(--rule); background:var(--surface-2);
+    font-family:"JetBrains Mono",monospace; font-size:10.5px;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint);
+  }
+  .pbox-head .star { color:var(--good); }
+  .pbox pre {
+    margin:0; padding:16px 18px; white-space:pre-wrap; word-wrap:break-word;
+    font-family:"JetBrains Mono",monospace; font-size:13.5px; line-height:1.6; color:var(--ink);
+  }
+  .pbox-note { padding:0 18px 15px; font-size:14.5px; color:var(--ink-soft); line-height:1.5; }
+  .cbtn {
+    margin-left:auto; border:1px solid var(--rule); background:var(--paper);
+    color:var(--ink-soft); font-family:"JetBrains Mono",monospace; font-size:10.5px;
+    letter-spacing:.08em; text-transform:uppercase; padding:5px 11px;
+    cursor:pointer; border-radius:2px; flex:none;
+  }
+  .cbtn:hover { border-color:var(--accent-dim); color:var(--accent); }
+  .cbtn:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+  .cbtn.done { color:var(--good); border-color:var(--good); }
+
+  .note { background:var(--surface); border:1px solid var(--rule); border-left:3px solid var(--accent);
+    padding:20px 22px; margin:0 0 22px; }
+  .note > *:last-child { margin-bottom:0; }
+  .note.crit { border-left-color:var(--crit); background:var(--crit-bg); }
+  .note.good { border-left-color:var(--good); background:var(--good-bg); }
+  .note.warn { border-left-color:var(--warn); background:var(--warn-bg); }
+  .note .lead { font-family:"Cormorant Garamond",Georgia,serif; font-size:22px; line-height:1.3; margin-bottom:10px; }
+
+  .scroll { overflow-x:auto; margin:0 0 20px; }
+  table { width:100%; border-collapse:collapse; font-size:14.5px; min-width:420px; }
+  th { text-align:left; font-family:"JetBrains Mono",monospace; font-size:10px; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--ink-faint); font-weight:400; padding:0 13px 8px 0;
+    border-bottom:1px solid var(--rule); }
+  td { padding:10px 13px 10px 0; border-bottom:1px solid var(--rule); vertical-align:top; }
+  .yes { color:var(--good); } .no { color:var(--crit); }
+
+  footer { margin-top:76px; padding-top:24px; border-top:1px solid var(--rule);
+    font-size:13.5px; color:var(--ink-faint); text-align:center; line-height:1.7; }
+  @media (max-width:520px){ .wrap{padding:0 16px 70px} .pbox-head{flex-wrap:wrap} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="kicker">A.L. cosmetology · візуал</p>
+  <h1>Промпти для генерації</h1>
+  <p class="lede">Готові описи, які вставляєте в ChatGPT — і отримуєте логотип, аватарку, обкладинки й фони в єдиному стилі. Кожен блок копіюється кнопкою.</p>
+</header>
+
+<div class="note">
+  <p class="lead">Чому саме так</p>
+  <p>Безкоштовні генератори, доступні мені, дають слабкий результат для логотипів — псують літери й перетворюють текст на кашу. Я це перевірив.</p>
+  <p style="margin-bottom:0">У ChatGPT якість значно вища. Тому розумніше розділити роботу: я складаю промпти під ваш бізнес, конкурентів і аудиторію, ви генеруєте там, де виходить добре.</p>
+</div>
+
+<h2><span class="n">01</span>Головне правило</h2>
+<p class="sub">прочитайте перед генерацією</p>
+
+<div class="note crit">
+  <p><strong>Не просіть генератор писати кирилицею.</strong> Жоден із них — ні ChatGPT, ні інші — не вміє нормально писати українські літери. Виходить «Кпсмtтплпг» замість «Косметолог».</p>
+  <p style="margin-bottom:0">Тому: генеруємо <strong>тільки картинку без тексту</strong>, а слова додаємо потім у Canva. Це займає хвилину й виглядає в рази краще.</p>
+</div>
+
+<p>Виняток — логотип із латинськими літерами <code>A · L</code>. Латиницю генератори пишуть непогано, але все одно перевіряйте: іноді додають зайві символи.</p>
+
+<h2><span class="n">02</span>Логотип</h2>
+<p class="sub">починаємо звідси</p>
+
+<p>Згенеруйте кілька варіантів кожного типу, потім оберемо разом. Просіть по 4 варіанти за раз.</p>
+
+<div class="pbox">
+  <div class="pbox-head"><span class="star">★</span><span>монограма — основний варіант</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>Create a minimalist luxury logo for a cosmetology studio.
+Monogram of two letters "A" and "L" separated by a small dot: A · L
+Refined high-contrast serif typeface, thin elegant strokes, generous letter spacing.
+Colour: deep espresso brown #2E2A26 on a warm cream background #FAF7F2.
+Below the monogram: a thin horizontal hairline, 60% of the monogram width.
+Flat vector style, no gradients, no shadows, no 3D, no extra decoration.
+Perfectly centered, square composition, lots of negative space.
+Give me 4 variations with different letter proportions.</pre>
+  <p class="pbox-note">Класична монограма. Найбезпечніший варіант — виглядатиме доречно й через п'ять років.</p>
+</div>
+
+<div class="pbox">
+  <div class="pbox-head"><span>знак без літер</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>Create an abstract logo mark for a luxury skincare and injectable clinic.
+A single continuous thin line forming a soft shape that reads simultaneously
+as a woman's profile in silhouette and as a droplet.
+One weight of line, no fills, no text, no letters.
+Colour: deep espresso brown #2E2A26 on warm cream #FAF7F2.
+Flat vector, geometric precision, calm and premium.
+Centered, square, generous negative space.
+Give me 4 distinct variations.</pre>
+  <p class="pbox-note">Знак, який працює без літер — для аватарки, водяного знака, печатки на фото.</p>
+</div>
+
+<div class="pbox">
+  <div class="pbox-head"><span>монограма в колі</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>Design a circular badge logo for a cosmetology studio.
+A thin circle outline containing the monogram "A · L" in an elegant serif typeface.
+Around the inner edge of the circle, small letters in a light sans-serif: COSMETOLOGY
+Colour: warm cream #FAF7F2 letters on deep espresso brown #2E2A26 circle.
+Flat design, no gradients, no shine, no 3D effects.
+Crisp and clean, suitable for a small profile picture.
+Give me 4 variations.</pre>
+  <p class="pbox-note">Готова аватарка. Кругла форма добре читається в маленькому розмірі.</p>
+</div>
+
+<h2><span class="n">03</span>Фони для постів</h2>
+<p class="sub">на них потім кладемо текст</p>
+
+<div class="pbox">
+  <div class="pbox-head"><span class="star">★</span><span>світлий фон — базовий</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>A soft minimal background for a beauty brand social media post.
+Warm cream and sand tones, very subtle paper texture, gentle natural light
+falling from the upper left, soft diffused shadow in the lower right corner.
+Completely empty in the centre — space for text.
+No objects, no people, no text, no logos.
+Calm, expensive, understated. Vertical format 4:5.</pre>
+  <p class="pbox-note">Універсальний фон. Зробіть 5–6 штук із різним світлом — будете чергувати.</p>
+</div>
+
+<div class="pbox">
+  <div class="pbox-head"><span>темний фон — для контрасту</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>A rich dark background for a premium skincare brand post.
+Deep espresso brown, almost black, with a very subtle warm gradient
+and fine grain texture. A faint pool of warm light in the upper third.
+Empty centre for text placement.
+No objects, no people, no text. Vertical 4:5, moody and elegant.</pre>
+  <p class="pbox-note">Темні пости зупиняють гортання. Робіть кожен третій пост темним.</p>
+</div>
+
+<div class="pbox">
+  <div class="pbox-head"><span>фон із текстурою тканини</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>Close-up of soft beige linen fabric, natural folds, warm daylight from the side.
+Shallow depth of field, muted colours, minimal composition.
+Large empty area in the centre for text.
+No objects, no people, no text. Vertical 4:5, calm and tactile.</pre>
+  <p class="pbox-note">Тканина додає відчуття дотику. Добре під теми про домашній догляд.</p>
+</div>
+
+<h2><span class="n">04</span>Предметні знімки</h2>
+<p class="sub">коли треба показати засоби</p>
+
+<div class="pbox">
+  <div class="pbox-head"><span class="star">★</span><span>баночки на світлому</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>Product photography of unbranded skincare containers:
+a frosted glass jar, a dropper serum bottle and a small tube,
+arranged as a calm still life on a warm cream surface.
+Soft natural window light from the left, long gentle shadows.
+Neutral beige and off-white packaging, no labels, no text, no logos.
+Minimal, editorial, expensive. Square format, shot from slightly above.</pre>
+  <p class="pbox-note">Важливо: <strong>no labels</strong> — інакше генератор напише нісенітницю на етикетках.</p>
+</div>
+
+<div class="pbox">
+  <div class="pbox-head"><span>текстура крему</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>Extreme close-up macro of a smooth cream texture swatch
+on a warm cream background, soft peaks and gentle swirls,
+natural side lighting, shallow depth of field.
+Ivory and pale beige tones. No objects, no text, no hands.
+Square format, tactile and clean.</pre>
+  <p class="pbox-note">Такі кадри добре працюють як фон для сторіс і як перебивка у відео.</p>
+</div>
+
+<h2><span class="n">05</span>Обкладинки хайлайтів</h2>
+<p class="sub">десять кружечків у профілі</p>
+
+<div class="pbox">
+  <div class="pbox-head"><span class="star">★</span><span>набір іконок одним запитом</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>Create a set of 10 minimal line icons for Instagram story highlight covers.
+Icons: price tag, lips, syringe, heart, cream jar, map pin,
+sparkle, graduation cap, delivery box, question mark.
+Single thin line weight, no fills, geometric and consistent.
+Colour: deep espresso brown #2E2A26 on warm cream #FAF7F2 circles.
+Each icon centered in its own circle, identical style across all ten.
+No text, no labels. Flat vector, clean.</pre>
+  <p class="pbox-note">Отримаєте набір одразу. Далі в Canva ставите під кожним слово: Ціни, Губи, Ботокс, Відгуки, Догляд, Як знайти, Процедури, Навчання, Доставка, Питання.</p>
+</div>
+
+<h2><span class="n">06</span>Що робити після генерації</h2>
+<p class="sub">доводимо до пуття</p>
+
+<h3>Як просити виправлення</h3>
+<p>Не починайте заново — просіть змінити конкретне:</p>
+<ul>
+  <li><em>«Same logo, but thinner lines and more space between letters»</em></li>
+  <li><em>«Keep the composition, change background to darker brown»</em></li>
+  <li><em>«Remove the extra symbol under the letters»</em></li>
+  <li><em>«Make it simpler — fewer details»</em></li>
+</ul>
+
+<h3>Як додати український текст</h3>
+<ol>
+  <li>Згенерований фон завантажуєте в Canva</li>
+  <li>Ставите текст шрифтом <strong>Cormorant Garamond</strong> для заголовків</li>
+  <li>Основний текст — <strong>Onest</strong></li>
+  <li>Обидва є в Canva безкоштовно</li>
+</ol>
+
+<div class="note good">
+  <p style="margin-bottom:0"><strong>Порада:</strong> зробіть у Canva один шаблон і зберігайте його копії. Тоді кожен наступний пост — це заміна фону й тексту, три хвилини роботи.</p>
+</div>
+
+<h3>Чого не приймати</h3>
+<div class="scroll">
+  <table>
+    <thead><tr><th>Ознака</th><th>Чому переробити</th></tr></thead>
+    <tbody>
+      <tr><td>Літери зі спотвореннями</td><td>Найчастіша помилка генераторів. Дивіться уважно на A і L</td></tr>
+      <tr><td>Зайві символи, крапки, риски</td><td>Генератор часто «домальовує» те, чого не просили</td></tr>
+      <tr><td>Градієнти й блиск</td><td>У 2026 це виглядає застаріло</td></tr>
+      <tr><td>Тіні під логотипом</td><td>Логотип має бути плоским, інакше не ляже на різні фони</td></tr>
+      <tr><td>Забагато деталей</td><td>В аватарці 40×40 пікселів вони зіллються в пляму</td></tr>
+      <tr><td>Написи на баночках</td><td>Там завжди нісенітниця. Просіть <code>no labels</code></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2><span class="n">07</span>Перевірка логотипа</h2>
+<p class="sub">перш ніж затверджувати</p>
+
+<p>Хороший логотип проходить чотири прості перевірки:</p>
+<ol>
+  <li><strong>Маленький розмір.</strong> Зменште до розміру нігтя. Чи впізнається? Аватарка в Instagram саме така</li>
+  <li><strong>Чорно-білий.</strong> Зробіть сірим. Чи працює? Якщо тримається лише на кольорі — слабкий</li>
+  <li><strong>На фото.</strong> Покладіть поверх знімка. Чи читається?</li>
+  <li><strong>Через день.</strong> Подивіться завтра свіжим оком. Часто те, що вчора подобалось, сьогодні вже ні</li>
+</ol>
+
+<div class="note warn">
+  <p style="margin-bottom:0"><strong>Не поспішайте.</strong> Логотип — єдина річ, яку потім важко змінити: він буде на аватарках, вивісці, візитках. Краще витратити два вечори на вибір, ніж міняти через півроку.</p>
+</div>
+
+<h2><span class="n">08</span>Коли буде готово</h2>
+<p class="sub">що далі</p>
+
+<p>Скиньте мені варіанти, які згенеруєте — я скажу, який працює краще й чому, з погляду того, як він виглядатиме в стрічці поруч із конкурентами.</p>
+<p>Після вибору зроблю:</p>
+<ul>
+  <li>Повний брендбук під обраний логотип</li>
+  <li>Шаблони постів під кожну рубрику</li>
+  <li>Матеріали для реклами</li>
+  <li>Сторінку-хаб із цінами й записом</li>
+</ul>
+
+<footer>
+  Промпти складено 1 вересня 2026 · під бренд A.L. cosmetology<br>
+  Кольори підібрані так, щоб не сперечатися з кольором шкіри на фото
+</footer>
+
+<script>
+  document.querySelectorAll('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var box = btn.closest('.pbox');
+      var txt = box ? box.querySelector('pre').innerText : '';
+      var done = function () {
+        btn.textContent = 'скопійовано'; btn.classList.add('done');
+        setTimeout(function () { btn.textContent = 'копіювати'; btn.classList.remove('done'); }, 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(txt).then(done, function () { fb(txt, done); });
+      } else { fb(txt, done); }
+    });
+  });
+  function fb(txt, done) {
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = txt; ta.setAttribute('readonly','');
+      ta.style.position='fixed'; ta.style.opacity='0';
+      document.body.appendChild(ta); ta.select();
+      document.execCommand('copy'); document.body.removeChild(ta); done();
+    } catch (e) {}
+  }
+</script>
+
+</div>
+</body>
+</html>
