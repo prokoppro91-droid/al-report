@@ -176,6 +176,24 @@
   }
   .steps > li b { display: block; margin-bottom: 3px; }
 
+  .docs { display: grid; gap: 12px; margin: 0 0 8px; }
+  .doc {
+    display: block; background: var(--surface); border: 1px solid var(--rule);
+    padding: 22px 24px; text-decoration: none; color: inherit; transition: border-color .15s;
+  }
+  .doc:hover, .doc:focus-visible { border-color: var(--accent-dim); }
+  .doc:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .doc-ic { font-size: 22px; display: block; margin-bottom: 8px; }
+  .doc-t {
+    font-family: "Cormorant Garamond", Georgia, serif; font-size: 24px;
+    font-weight: 600; display: block; margin-bottom: 6px; color: var(--ink);
+  }
+  .doc-d { display: block; font-size: 15.5px; color: var(--ink-soft); line-height: 1.55; margin-bottom: 12px; }
+  .doc-go {
+    font-family: "JetBrains Mono", monospace; font-size: 11px;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--accent);
+  }
+
   footer {
     margin-top: 86px; padding-top: 26px; border-top: 1px solid var(--rule);
     font-size: 14px; color: var(--ink-faint); line-height: 1.7; text-align: center;
@@ -933,7 +951,37 @@
   <div class="note warm">
     <p class="lead">Перші тексти вже готові</p>
     <p>Нові біо для Instagram і TikTok, сім наборів хештегів, шість автовідповідей для директу, сценарій рейтингу й чотири ідеї сценок — усе з кнопкою «копіювати».</p>
-    <p style="margin-bottom:0"><a href="https://claude.ai/code/artifact/dd6f72a7-b2d2-4733-a262-d30cfab939b0">Відкрити готові тексти →</a></p>
+    <p style="margin-bottom:0"><a href="./texty/">Відкрити готові тексти →</a></p>
+  </div>
+</section>
+
+<section id="dokumenty">
+  <h2>Решта документів</h2>
+  <p class="sub">усе за цим самим посиланням</p>
+
+  <p>Крім цієї сторінки, є ще три. Вони відкриваються звідси — нічого шукати не треба.</p>
+
+  <div class="docs">
+    <a class="doc" href="./texty/">
+      <span class="doc-ic">✍️</span>
+      <span class="doc-t">Готові тексти</span>
+      <span class="doc-d">Нові біо, хештеги, шість автовідповідей у директ, сценарій рейтингу для TikTok і чотири ідеї сценок. Кожен блок із кнопкою «копіювати» — відкрили, натиснули, вставили.</span>
+      <span class="doc-go">Відкрити →</span>
+    </a>
+
+    <a class="doc" href="./plan/">
+      <span class="doc-ic">📋</span>
+      <span class="doc-t">Порядок дій</span>
+      <span class="doc-d">План на три місяці по кроках: що робимо першого тижня, що другого, коли беремося за зйомку й коли за рекламу. Позначено, що роблю я, а що потрібно від вас.</span>
+      <span class="doc-go">Відкрити →</span>
+    </a>
+
+    <a class="doc" href="./audyt/">
+      <span class="doc-ic">📊</span>
+      <span class="doc-t">Технічний аудит</span>
+      <span class="doc-d">Те саме, але з усіма цифрами й таблицями — для тих, хто хоче побачити самі дані. Тут ця сторінка переказує його простими словами.</span>
+      <span class="doc-go">Відкрити →</span>
+    </a>
   </div>
 </section>
 

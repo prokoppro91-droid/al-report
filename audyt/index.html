@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light dark">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Аудит A.L. cosmetology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Onest:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --paper:      #F7F4F1;
+    --surface:    #FFFFFF;
+    --surface-2:  #F1ECE7;
+    --ink:        #241F1D;
+    --ink-soft:   #5C534E;
+    --ink-faint:  #948880;
+    --rule:       #DFD6CE;
+    --accent:     #7B2E3E;
+    --accent-dim: #B08792;
+    --good:       #3D6B55;
+    --warn:       #9A6B22;
+    --crit:       #A6382F;
+    --good-bg:    #E7EFE9;
+    --warn-bg:    #F6EDDD;
+    --crit-bg:    #F7E5E2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:      #17130F;
+      --surface:    #201A17;
+      --surface-2:  #2A231F;
+      --ink:        #F0E9E3;
+      --ink-soft:   #B8ABA2;
+      --ink-faint:  #8A7C73;
+      --rule:       #382F29;
+      --accent:     #E39AA8;
+      --accent-dim: #7E5560;
+      --good:       #8CC0A2;
+      --warn:       #D6A961;
+      --crit:       #E8897E;
+      --good-bg:    #1E2C24;
+      --warn-bg:    #2E2519;
+      --crit-bg:    #33201D;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:      #17130F;
+    --surface:    #201A17;
+    --surface-2:  #2A231F;
+    --ink:        #F0E9E3;
+    --ink-soft:   #B8ABA2;
+    --ink-faint:  #8A7C73;
+    --rule:       #382F29;
+    --accent:     #E39AA8;
+    --accent-dim: #7E5560;
+    --good:       #8CC0A2;
+    --warn:       #D6A961;
+    --crit:       #E8897E;
+    --good-bg:    #1E2C24;
+    --warn-bg:    #2E2519;
+    --crit-bg:    #33201D;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Onest", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-weight: 400;
+    font-size: 16.5px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 28px 120px;
+  }
+  .col {
+    max-width: 660px;
+  }
+
+  /* ---------- head ---------- */
+  header {
+    padding: 72px 0 44px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 56px;
+  }
+  .eyebrow {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11.5px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 20px;
+  }
+  h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(40px, 7vw, 68px);
+    line-height: 1.02;
+    letter-spacing: -.015em;
+    margin: 0 0 22px;
+    text-wrap: balance;
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .standfirst {
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 620px;
+    margin: 0;
+    font-weight: 300;
+  }
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin-top: 34px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11.5px;
+    letter-spacing: .05em;
+    color: var(--ink-faint);
+  }
+  .meta-row b { color: var(--ink-soft); font-weight: 500; }
+
+  /* ---------- sections ---------- */
+  section { margin-bottom: 76px; scroll-margin-top: 24px; }
+
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 12px;
+    margin-bottom: 32px;
+  }
+  .sec-num {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: .08em;
+    flex: none;
+  }
+  h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(27px, 3.6vw, 37px);
+    line-height: 1.12;
+    margin: 0;
+    letter-spacing: -.01em;
+  }
+  h3 {
+    font-family: "Onest", sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: -.005em;
+    margin: 38px 0 12px;
+  }
+  p { margin: 0 0 17px; }
+  .col p, .col ul, .col ol { max-width: 660px; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  strong { font-weight: 600; }
+
+  ul, ol { padding-left: 20px; margin: 0 0 17px; }
+  li { margin-bottom: 8px; }
+  li::marker { color: var(--ink-faint); }
+
+  /* ---------- verdict callout ---------- */
+  .verdict {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--accent);
+    padding: 30px 32px;
+    margin: 0 0 40px;
+  }
+  .verdict p:last-child { margin-bottom: 0; }
+  .verdict .lead {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 25px;
+    line-height: 1.28;
+    color: var(--ink);
+    margin-bottom: 14px;
+  }
+
+  /* ---------- funnel ---------- */
+  .funnel {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: stretch;
+    gap: 0;
+    margin: 0 0 42px;
+    border: 1px solid var(--rule);
+    background: var(--rule);
+  }
+  .funnel-step {
+    background: var(--surface);
+    padding: 24px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+  }
+  .funnel-step .fs-n {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 46px;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -.02em;
+  }
+  .funnel-step.crit .fs-n { color: var(--crit); }
+  .funnel-step .fs-l {
+    font-size: 13.5px;
+    line-height: 1.4;
+    color: var(--ink-soft);
+  }
+  .funnel-drop {
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+  }
+  .funnel-drop span {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: .06em;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  .funnel-drop::before {
+    content: "→";
+    color: var(--ink-faint);
+    margin-right: 7px;
+  }
+  @media (max-width: 640px) {
+    .funnel { grid-template-columns: 1fr; }
+    .funnel-drop { padding: 8px 22px; justify-content: flex-start; }
+    .funnel-drop::before { content: "↓"; }
+  }
+
+  /* ---------- stat cards ---------- */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(212px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-bottom: 34px;
+  }
+  .card {
+    background: var(--surface);
+    padding: 22px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .card .k {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10.5px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .card .v {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 42px;
+    line-height: 1.05;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -.02em;
+  }
+  .card .n { font-size: 13.5px; color: var(--ink-soft); line-height: 1.42; }
+
+  /* ---------- pills ---------- */
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10.5px;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+  .p-good { background: var(--good-bg); color: var(--good); }
+  .p-warn { background: var(--warn-bg); color: var(--warn); }
+  .p-crit { background: var(--crit-bg); color: var(--crit); }
+
+  /* ---------- tables ---------- */
+  .scroll { overflow-x: auto; margin-bottom: 30px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14.5px;
+    min-width: 520px;
+  }
+  th {
+    text-align: left;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    font-weight: 400;
+    padding: 0 14px 9px 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: bottom;
+  }
+  td {
+    padding: 11px 14px 11px 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  td.num, th.num {
+    font-family: "JetBrains Mono", monospace;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    padding-right: 0;
+  }
+  tr.hi td { background: var(--surface-2); }
+  .dim { color: var(--ink-faint); }
+
+  /* ---------- bar chart ---------- */
+  .bars { margin-bottom: 30px; }
+  .bar-row {
+    display: grid;
+    grid-template-columns: minmax(150px, 1.1fr) 1fr auto;
+    align-items: center;
+    gap: 14px;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .bar-label { font-size: 14px; line-height: 1.3; }
+  .bar-track { height: 9px; background: var(--surface-2); position: relative; }
+  .bar-fill { height: 100%; background: var(--accent-dim); }
+  .bar-fill.peak { background: var(--accent); }
+  .bar-val {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12.5px;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-soft);
+    min-width: 62px;
+    text-align: right;
+  }
+
+  /* ---------- quote compare ---------- */
+  .compare {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-bottom: 30px;
+  }
+  .compare > div { background: var(--surface); padding: 24px; }
+  .compare h4 {
+    margin: 0 0 4px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .compare .who {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 16px;
+  }
+  .quote {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 17.5px;
+    line-height: 1.42;
+    font-style: italic;
+    color: var(--ink);
+    padding-left: 14px;
+    border-left: 2px solid var(--accent-dim);
+    margin: 0 0 14px;
+  }
+  .quote:last-child { margin-bottom: 0; }
+
+  /* ---------- steps ---------- */
+  .step {
+    border-top: 1px solid var(--rule);
+    padding: 30px 0 8px;
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 20px;
+  }
+  .step:last-of-type { border-bottom: 1px solid var(--rule); margin-bottom: 30px; }
+  .step-n {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 34px;
+    line-height: 1;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+  .step-body h3 { margin-top: 0; }
+  .step-why {
+    background: var(--surface-2);
+    border-left: 2px solid var(--accent-dim);
+    padding: 13px 16px;
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin: 14px 0 0;
+  }
+  .step-why b { color: var(--ink); font-weight: 600; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+
+  .todo { list-style: none; padding-left: 0; }
+  .todo li {
+    padding-left: 26px;
+    position: relative;
+    margin-bottom: 9px;
+  }
+  .todo li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 7px;
+    width: 12px; height: 12px;
+    border: 1px solid var(--accent-dim);
+  }
+
+  /* ---------- split responsibility ---------- */
+  .split {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .split > div { background: var(--surface); padding: 26px; }
+  .split h4 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 14px;
+  }
+  .split ul { padding-left: 18px; margin: 0; font-size: 15px; }
+
+  footer {
+    margin-top: 90px;
+    padding-top: 26px;
+    border-top: 1px solid var(--rule);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11.5px;
+    letter-spacing: .05em;
+    color: var(--ink-faint);
+    line-height: 1.8;
+  }
+
+  @media (max-width: 620px) {
+    .wrap { padding: 0 20px 80px; }
+    header { padding-top: 48px; }
+    .step { grid-template-columns: 38px 1fr; gap: 14px; }
+    .step-n { font-size: 26px; }
+    .bar-row { grid-template-columns: 1fr; gap: 5px; }
+    .bar-val { text-align: left; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">Аудит соцмереж · 31 серпня 2026 · дані зі статистики акаунта</p>
+  <h1>85 тисяч побачили. <em>Тринадцять</em> натиснули.</h1>
+  <p class="standfirst">Косметологічний кабінет A.L. cosmetology, Хмельницький. Розбір трьох акаунтів зі справжніми показниками Instagram, порівняння з конкурентами та план на три місяці.</p>
+  <div class="meta-row">
+    <span>Instagram <b>@face_expert_anna</b></span>
+    <span>TikTok <b>@face_expert_anna</b></span>
+    <span>Facebook <b>anna.cosmetologist.1</b></span>
+  </div>
+</header>
+
+<section>
+  <div class="sec-head"><span class="sec-num">01</span><h2>Головне</h2></div>
+
+  <div class="verdict col">
+    <p class="lead">Проблема не в охопленні. Охоплення чудове — 85 469 людей за місяць. Проблема в тому, що з них у профіль зайшли 764, а посилання натиснули тринадцятеро.</p>
+    <p>Зовні здавалося, що контент не виходить за межі підписників. Статистика акаунта це спростувала: <strong>78,3 % переглядів — від людей, які не підписані</strong>. Алгоритм показує Анну новій аудиторії щедро й безкоштовно.</p>
+    <p style="margin-bottom:0">Але далі шлях обривається. Людина подивилася, посміялася, поділилася з подругою — і пішла, так і не дізнавшись, хто це, де це й скільки коштує.</p>
+  </div>
+
+  <div class="funnel">
+    <div class="funnel-step">
+      <span class="fs-n">85 469</span>
+      <span class="fs-l">людей побачили контент за місяць</span>
+    </div>
+    <div class="funnel-drop"><span>0,9 %</span></div>
+    <div class="funnel-step">
+      <span class="fs-n">764</span>
+      <span class="fs-l">зайшли в профіль</span>
+    </div>
+    <div class="funnel-drop"><span>1,7 %</span></div>
+    <div class="funnel-step crit">
+      <span class="fs-n">13</span>
+      <span class="fs-l">натиснули посилання</span>
+    </div>
+  </div>
+
+  <div class="verdict col" style="border-left-color: var(--crit)">
+    <p class="lead" style="margin-bottom:10px">А тепер число, яке підсумовує весь місяць: <strong style="color:var(--crit)">приріст підписників +1</strong>.</p>
+    <p style="margin-bottom:0">192 328 переглядів, 85 469 охоплених людей, 6 866 взаємодій — і один новий підписник за тридцять днів. Вірусний ролик на 137 854 перегляди приніс п'ятьох.</p>
+  </div>
+
+  <h3>Три знахідки, які змінюють усе</h3>
+  <ol class="col">
+    <li><strong>Вірусність без мови приводить не тих людей.</strong> В Instagram лише 37,8 % аудиторії — з України, бо один ролик без слів рознесло у Бразилію та Індонезію. У TikTok, де такого не сталося, українців <strong>81 %</strong>. Контент має говорити українською, щоб алгоритм ніс його своїм.</li>
+    <li><strong>Профіль не перетворює перегляди ні на що.</strong> 85 тисяч охоплених, 764 візити, 13 переходів, +1 підписник. Немає прайсу, немає адреси, немає причини підписатися.</li>
+    <li><strong>Формат, що дає у 75 разів більше, зроблено сім разів.</strong> Рейтинги «від 1 до 10» у TikTok дали в середньому по 100 065 переглядів. Пости «в наявності, пишіть у директ» — по 1 323, і їх зроблено 67.</li>
+    <li><strong>На обидві платформи йде однаковий контент, хоча вони вимагають протилежного.</strong> Те саме відео «Топ 3 креми» зібрало 30 150 у TikTok і 911 в Instagram.</li>
+    <li><strong>Facebook — особистий профіль, а не бізнес-сторінка.</strong> З нього неможливо запустити рекламу чи підключити статистику. Meta забороняє вести комерцію з особистих профілів — це ризик блокування.</li>
+  </ol>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">02</span><h2>Стан акаунтів</h2></div>
+
+  <div class="cards">
+    <div class="card">
+      <span class="k">Instagram</span>
+      <span class="v">2 524</span>
+      <span class="n">підписники · 384 дописи<br><span class="pill p-warn">Creator, не Business</span></span>
+    </div>
+    <div class="card">
+      <span class="k">Охоплення за місяць</span>
+      <span class="v">85 469</span>
+      <span class="n">людей побачили контент<br><span class="pill p-good">78,4 % — не підписники</span></span>
+    </div>
+    <div class="card">
+      <span class="k">Приріст за місяць</span>
+      <span class="v">+1</span>
+      <span class="n">новий підписник<br><span class="pill p-crit">конверсія ≈ нуль</span></span>
+    </div>
+    <div class="card">
+      <span class="k">TikTok</span>
+      <span class="v">4 069</span>
+      <span class="n">підписники · 1 070 відео<br><span class="pill p-good">81 % — Україна</span></span>
+    </div>
+    <div class="card">
+      <span class="k">Facebook</span>
+      <span class="v">—</span>
+      <span class="n">особистий профіль<br><span class="pill p-crit">сторінки немає</span></span>
+    </div>
+    <div class="card">
+      <span class="k">YouTube</span>
+      <span class="v">0</span>
+      <span class="n">канал не створено<br><span class="pill p-crit">ресурс не задіяно</span></span>
+    </div>
+  </div>
+
+  <div class="col">
+    <p>У TikTok більше підписників — але вони мертві. За той самий місяць акаунт із 4 069 підписників дав <strong>16 700 переглядів</strong>, тоді як Instagram із 2 524 підписниками — <strong>192 328</strong>. Різниця в 11,5 раза не на користь TikTok.</p>
+  </div>
+
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Серпень 2026</th><th class="num">Instagram</th><th class="num">TikTok</th><th>Хто сильніший</th></tr></thead>
+      <tbody>
+        <tr><td>Підписників</td><td class="num">2 524</td><td class="num">4 069</td><td>TikTok</td></tr>
+        <tr class="hi"><td>Переглядів за місяць</td><td class="num">192 328</td><td class="num">16 700</td><td><strong>Instagram, у 11,5×</strong></td></tr>
+        <tr><td>Охоплено людей</td><td class="num">85 469</td><td class="num">8 800</td><td>Instagram, у 9,7×</td></tr>
+        <tr><td>Візитів у профіль</td><td class="num">764</td><td class="num">181</td><td>Instagram, у 4,2×</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>І TikTok не просто відстає — він <strong>падає</strong>. За місяць: перегляди −37,1 %, глядачі −28,5 %, уподобайки −48,5 %, візити профілю −37,6 %. Щоправда, за останній тиждень показники розвернулися вгору: глядачі +10 %, нові глядачі +16,5 %.</p>
+    <p>Але там є два козирі, яких немає в Instagram. Перший: <strong>32,7 % переглядів приходить із пошуку</strong>. Люди щось шукають і знаходять Анну — це працює як на YouTube, відео під конкретний запит приводить людей місяцями після публікації.</p>
+    <p>Другий — якість аудиторії.</p>
+  </div>
+
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Звідки глядачі</th><th class="num">Instagram</th><th class="num">TikTok</th></tr></thead>
+      <tbody>
+        <tr class="hi"><td>🇺🇦 Україна</td><td class="num">37,8 %</td><td class="num"><strong>81,0 %</strong></td></tr>
+        <tr><td>🇵🇱 Польща</td><td class="num">34,1 %</td><td class="num">5,0 %</td></tr>
+        <tr><td>🇧🇷 Бразилія</td><td class="num">10,3 %</td><td class="num">—</td></tr>
+        <tr><td>🇮🇩 Індонезія</td><td class="num">3,3 %</td><td class="num">—</td></tr>
+        <tr><td>Європа (Чехія, Німеччина, Італія…)</td><td class="num">—</td><td class="num">~5 %</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>На кожен перегляд TikTok приносить удвічі більше українців. У перерахунку на місяць Instagram усе одно дає більше в абсолютних числах — <strong>близько 32 300 українських глядачів проти 7 100</strong> — але TikTok заслуговує не на роль «другорядного», а на роль другого основного каналу.</p>
+  </div>
+
+  <h3>Instagram за останні 30 днів</h3>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Показник</th><th class="num">Значення</th><th>Що це означає</th></tr></thead>
+      <tbody>
+        <tr class="hi">
+          <td>Перегляди</td>
+          <td class="num">192 328</td>
+          <td>Дуже багато для 2 524 підписників</td>
+        </tr>
+        <tr class="hi">
+          <td>Переглядів від не-підписників</td>
+          <td class="num">78,3 %</td>
+          <td>Алгоритм щедро показує новим людям</td>
+        </tr>
+        <tr>
+          <td>Охоплено різних людей</td>
+          <td class="num">85 469</td>
+          <td>Утричі більше за населення району міста</td>
+        </tr>
+        <tr>
+          <td>Взаємодії</td>
+          <td class="num">9 255</td>
+          <td>Реакції, коментарі, поширення, збереження</td>
+        </tr>
+        <tr>
+          <td>Відвідування профілю</td>
+          <td class="num">764</td>
+          <td>Лише 0,9 % тих, хто побачив</td>
+        </tr>
+        <tr class="hi">
+          <td>Натискань на посилання</td>
+          <td class="num">13</td>
+          <td>За цілий місяць</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>Розподіл переглядів за форматом пояснює, куди варто витрачати сили: <strong>Reels — 81,7 %</strong>, сторіс — 17,4 %, а звичайні дописи-фото — <strong>0,9 %</strong>. Фото-пости практично не працюють, хоча на них іде стільки ж часу.</p>
+  </div>
+
+  <h3>Один ролик проти всього іншого</h3>
+  <p class="col dim" style="font-size:14.5px">Instagram, перегляди за 30 днів. Той самий місяць, той самий акаунт.</p>
+
+  <div class="bars">
+    <div class="bar-row">
+      <span class="bar-label">Сценка з чоловіком, 11 секунд</span>
+      <span class="bar-track"><span class="bar-fill peak" style="width:100%"></span></span>
+      <span class="bar-val">137 854</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">«Завершуємо тиждень з гумором»</span>
+      <span class="bar-track"><span class="bar-fill" style="width:2.3%"></span></span>
+      <span class="bar-val">3 114</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">«Тренінг із продажів не пройшов даремно»</span>
+      <span class="bar-track"><span class="bar-fill" style="width:2%"></span></span>
+      <span class="bar-val">2 718</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">Контурна пластика губ</span>
+      <span class="bar-track"><span class="bar-fill" style="width:0.8%"></span></span>
+      <span class="bar-val">1 109</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">«Для замовлення пишіть у директ»</span>
+      <span class="bar-track"><span class="bar-fill" style="width:0.5%"></span></span>
+      <span class="bar-val">640</span>
+    </div>
+  </div>
+
+  <div class="col">
+    <p>Той ролик — <strong>11 секунд</strong>, гумористична сценка: чоловік і Анна в кабінеті, подарунковий пакет із косметикою. Свій звук, двоє в кадрі, знято на робочому місці. Підпис — самі хештеги, без жодного слова.</p>
+    <p>1 613 реакцій, 98 коментарів і <strong>42 поширення</strong> — люди пересилали це своїм чоловікам і подругам. У коментарях: «шедевр», «бідна баба 🤣», «тепер "щедрого хлопа" будуть знати в лице».</p>
+    <p>Це і є формула виходу до нової аудиторії: впізнавана життєва ситуація, гумор, двоє людей, коротко. Не показ баночки.</p>
+  </div>
+
+  <h3>TikTok: колишні хіти й теперішня реальність</h3>
+  <p class="col dim" style="font-size:14.5px">TikTok, перегляди. Закріплені хіти проти того, що виходить зараз.</p>
+
+  <div class="bars">
+    <div class="bar-row">
+      <span class="bar-label">Рейтинг брендів «від 1 до 10»</span>
+      <span class="bar-track"><span class="bar-fill peak" style="width:100%"></span></span>
+      <span class="bar-val">510 900</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">Той самий формат, версія 2</span>
+      <span class="bar-track"><span class="bar-fill peak" style="width:25.8%"></span></span>
+      <span class="bar-val">132 000</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">Відповідь на питання підписниці</span>
+      <span class="bar-track"><span class="bar-fill peak" style="width:20%"></span></span>
+      <span class="bar-val">102 200</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">«Топові новинки від бренду»</span>
+      <span class="bar-track"><span class="bar-fill" style="width:0.5%"></span></span>
+      <span class="bar-val">404</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">«Для замовлення пишіть у директ»</span>
+      <span class="bar-track"><span class="bar-fill" style="width:0.4%"></span></span>
+      <span class="bar-val">303</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">«Для підбору догляду пишіть»</span>
+      <span class="bar-track"><span class="bar-fill" style="width:0.45%"></span></span>
+      <span class="bar-val">381</span>
+    </div>
+  </div>
+
+  <div class="col">
+    <p>Медіана свіжих відео — близько <strong>430 переглядів при 4 069 підписниках</strong>. Навіть власна аудиторія бачить не всі публікації, а нових глядачів алгоритм майже не приводить.</p>
+    <p>Обидва канали розповідають ту саму історію: показ окремого продукту з підписом «пишіть у директ» не працює ніде. Різниця лише в тому, що Instagram усе ще щедро роздає покази, а TikTok уже перестав.</p>
+  </div>
+
+  <h3>Instagram: що показують цифри</h3>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>Публікація</th>
+          <th>Тип</th>
+          <th class="num">Перегляди</th>
+          <th class="num">Реакції</th>
+          <th class="num">Коментарі</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hi">
+          <td>Ботокс Full Face — з описом процедури</td>
+          <td>процедура</td>
+          <td class="num">3 141</td>
+          <td class="num">38</td>
+          <td class="num">11</td>
+        </tr>
+        <tr>
+          <td>Тренд / мем</td>
+          <td>розвага</td>
+          <td class="num">2 266</td>
+          <td class="num">52</td>
+          <td class="num">8</td>
+        </tr>
+        <tr>
+          <td>Подяка тренеру</td>
+          <td>особисте</td>
+          <td class="num">1 519</td>
+          <td class="num">57</td>
+          <td class="num">13</td>
+        </tr>
+        <tr>
+          <td>«Бліц зі мною»</td>
+          <td>рубрика</td>
+          <td class="num">1 281</td>
+          <td class="num">62</td>
+          <td class="num">4</td>
+        </tr>
+        <tr>
+          <td>Продукт Xuandi Si</td>
+          <td>товар</td>
+          <td class="num">1 065</td>
+          <td class="num">28</td>
+          <td class="num">1</td>
+        </tr>
+        <tr>
+          <td>Меми про косметику</td>
+          <td>розвага</td>
+          <td class="num">842</td>
+          <td class="num">27</td>
+          <td class="num">1</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>Найбільше переглядів зібрав пост про <strong>процедуру з нормальним описом</strong> — саме той тип контенту, який виходить найрідше. Пости про товари дають найслабший відгук: один коментар на тисячу переглядів.</p>
+  </div>
+
+  <h3>Хто ці 85 тисяч людей</h3>
+  <div class="col">
+    <p>Ось відповідь на питання, чому вірусний ролик не приніс клієнтів.</p>
+  </div>
+
+  <div class="bars">
+    <div class="bar-row">
+      <span class="bar-label">🇺🇦 Україна</span>
+      <span class="bar-track"><span class="bar-fill peak" style="width:100%"></span></span>
+      <span class="bar-val">37,8 %</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">🇵🇱 Польща</span>
+      <span class="bar-track"><span class="bar-fill" style="width:90.2%"></span></span>
+      <span class="bar-val">34,1 %</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">🇧🇷 Бразилія</span>
+      <span class="bar-track"><span class="bar-fill" style="width:27.2%"></span></span>
+      <span class="bar-val">10,3 %</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">🇮🇩 Індонезія</span>
+      <span class="bar-track"><span class="bar-fill" style="width:8.7%"></span></span>
+      <span class="bar-val">3,3 %</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">🇷🇺 Росія</span>
+      <span class="bar-track"><span class="bar-fill" style="width:4.5%"></span></span>
+      <span class="bar-val">1,7 %</span>
+    </div>
+  </div>
+
+  <div class="col">
+    <p><strong>Менш ніж 38 % аудиторії живе в Україні.</strong> Бразилія та Індонезія — це прямий наслідок вірусного ролика: гумор без слів зрозумілий будь-де, тому Instagram рознiс його по світу. Ці перегляди не варті нічого, і саме тому 137 854 покази дали п'ятьох підписників.</p>
+    <p>Але <strong>Польща — це не сміття</strong>. 34,1 % — українська діаспора. На процедуру вони не приїдуть, зате косметику з доставкою купувати можуть. La Belle будує на цьому половину бізнесу: «📦 Доставка по Україні та світу».</p>
+  </div>
+
+  <div class="verdict col">
+    <p class="lead" style="margin-bottom:10px">Важлива поправка: іноземною була не аудиторія, а один ролик.</p>
+    <p style="margin-bottom:0">137 854 з 192 328 переглядів місяця дав саме він. Для порівняння — <strong>у TikTok, куди цей ролик так не «вистрілив», Україна становить 81 %</strong>. Тобто звичайний контент Анни дивляться українці; глобальний хвіст притягнув один вірусний виняток.</p>
+  </div>
+
+  <h3>Аудиторія за статтю й віком — тут усе ідеально</h3>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Вік</th><th class="num">Частка</th><th>Хто це</th></tr></thead>
+      <tbody>
+        <tr class="hi"><td>25–34</td><td class="num">40,1 %</td><td>Основна платоспроможна група</td></tr>
+        <tr class="hi"><td>35–44</td><td class="num">35,7 %</td><td>Найдорожчі процедури — саме тут</td></tr>
+        <tr><td>45–54</td><td class="num">12,9 %</td><td>Anti-age напрям</td></tr>
+        <tr><td>18–24</td><td class="num">7,6 %</td><td>Акне, догляд, малий чек</td></tr>
+        <tr><td>55+</td><td class="num">3,3 %</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col">
+    <p>Жінки — <strong>89,8 %</strong>, вік 25–44 — <strong>75,8 %</strong>. Це точнісінько цільова аудиторія косметології. Тут міняти нічого не треба: люди правильні, просто половина з них — не в тому місті.</p>
+  </div>
+
+  <h3>Коли вони онлайн</h3>
+  <div class="col">
+    <p>Активність тримається з 12:00 до 21:00. Найкращі вікна: <strong>понеділок і середа 15:00–18:00</strong>, <strong>вівторок 12:00–15:00</strong>. До 9 ранку публікувати немає сенсу.</p>
+    <p>І ще одна порожня клітинка: <strong>прямі ефіри — 0 переглядів, 0 взаємодій</strong>. Формат не використовується взагалі, хоча Instagram його просуває, а для косметолога це готова рубрика «відповідаю на ваші питання наживо».</p>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">03</span><h2>Весь час: 1 422 публікації</h2></div>
+
+  <div class="col">
+    <p>Зібрано кожну публікацію обох акаунтів від першого дня: <strong>382 дописи Instagram</strong> з січня 2020 і <strong>1 040 відео TikTok</strong> з грудня 2020. За весь час TikTok дав <strong>1 868 113</strong> переглядів, Instagram — <strong>599 552</strong>. Утричі більше там, куди йде менше уваги.</p>
+    <p>На такому обсязі видно те, чого не видно за місяць.</p>
+  </div>
+
+  <h3>Формат, який дає у 75 разів більше</h3>
+  <p class="col dim" style="font-size:14.5px">TikTok, усі 1 040 відео, згруповано за типом.</p>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Формат</th><th class="num">Зроблено</th><th class="num">Середні перегляди</th></tr></thead>
+      <tbody>
+        <tr class="hi"><td><strong>Рейтинг «від 1 до 10», «Топ-N»</strong></td><td class="num">7</td><td class="num"><strong>100 065</strong></td></tr>
+        <tr><td>Добірка засобів</td><td class="num">8</td><td class="num">11 170</td></tr>
+        <tr><td>«Відповідь користувачу»</td><td class="num">45</td><td class="num">4 791</td></tr>
+        <tr><td>Гумор</td><td class="num">36</td><td class="num">2 916</td></tr>
+        <tr class="hi"><td>«В наявності, пишіть у директ»</td><td class="num">67</td><td class="num">1 323</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col">
+    <p>Формат-переможець знято <strong>сім разів</strong>. Найслабший — <strong>шістдесят сім</strong>. Одне відео «Розставляє бренди від 1 до 10» зібрало 510 905 переглядів і <strong>6 839 збережень</strong>.</p>
+  </div>
+
+  <h3>Платформи вимагають протилежного</h3>
+  <div class="col">
+    <p>Це найдорожча помилка з усіх: на обидві платформи йде однаковий контент, хоча вони винагороджують різне.</p>
+  </div>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Тривалість відео</th><th class="num">TikTok, середнє</th><th class="num">Instagram, медіана</th></tr></thead>
+      <tbody>
+        <tr><td>до 15 с</td><td class="num">1 151</td><td class="num"><strong>1 368</strong></td></tr>
+        <tr><td>15–20 с</td><td class="num">912</td><td class="num"><strong>1 800</strong></td></tr>
+        <tr><td>30–60 с</td><td class="num">892</td><td class="num">899</td></tr>
+        <tr><td>1–2 хв</td><td class="num">2 441</td><td class="num">—</td></tr>
+        <tr class="hi"><td>2–4 хв</td><td class="num"><strong>14 204</strong></td><td class="num">—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col">
+    <p>У TikTok виграють <strong>довгі</strong> відео — дві-чотири хвилини дають у 15 разів більше за короткі. В Instagram виграють <strong>короткі</strong> — 15–20 секунд, а 30–60 секунд є найгіршим діапазоном, і саме там знято найбільше роликів.</p>
+  </div>
+
+  <div class="verdict col" style="border-left-color: var(--crit)">
+    <p class="lead" style="margin-bottom:12px">Доказ, який не залишає сумнівів: те саме відео на двох платформах.</p>
+    <div class="scroll" style="margin:0">
+      <table style="min-width:auto">
+        <thead><tr><th>Відео</th><th class="num">TikTok</th><th class="num">Instagram</th></tr></thead>
+        <tbody>
+          <tr><td>«Топ 3 креми для сухої шкіри»</td><td class="num"><strong>30 150</strong></td><td class="num">911</td></tr>
+          <tr><td>«Топ 5 кремів навколо очей»</td><td class="num"><strong>24 151</strong></td><td class="num">806</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h3>Листопад 2025: місяць, коли все працювало</h3>
+  <div class="bars">
+    <div class="bar-row">
+      <span class="bar-label">Листопад 2025 <span class="dim">— виходили рейтинги</span></span>
+      <span class="bar-track"><span class="bar-fill peak" style="width:100%"></span></span>
+      <span class="bar-val">771 595</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">Січень 2026</span>
+      <span class="bar-track"><span class="bar-fill" style="width:37.8%"></span></span>
+      <span class="bar-val">291 849</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">Грудень 2025</span>
+      <span class="bar-track"><span class="bar-fill" style="width:15.1%"></span></span>
+      <span class="bar-val">116 716</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">Травень 2026</span>
+      <span class="bar-track"><span class="bar-fill" style="width:4.9%"></span></span>
+      <span class="bar-val">38 212</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">Серпень 2026 <span class="dim">— самі продажі</span></span>
+      <span class="bar-track"><span class="bar-fill" style="width:1.4%"></span></span>
+      <span class="bar-val">10 804</span>
+    </div>
+  </div>
+  <div class="col">
+    <p>Перегляди TikTok за місяць впали з <strong>771 595</strong> до <strong>10 804</strong> — у 71 раз. Медіана збережень з шести до нуля. Це не алгоритм зіпсувався: у листопаді виходили рейтинги, зараз виходить «в наявності, пишіть у директ».</p>
+    <p>Instagram натомість стоїть рівно: медіана десять місяців поспіль тримається на 1 000–1 200 переглядів і не зростає. Серпнева сума підскочила лише через один вірусний ролик — медіана не змінилася.</p>
+  </div>
+
+  <h3>На що витрачається більшість зусиль</h3>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Тема в Instagram</th><th class="num">Публікацій</th><th class="num">Медіана переглядів</th><th class="num">Коментарів</th></tr></thead>
+      <tbody>
+        <tr class="hi"><td>Гумор / жарт</td><td class="num">30</td><td class="num"><strong>1 893</strong></td><td class="num">11</td></tr>
+        <tr class="hi"><td>Особисте</td><td class="num">11</td><td class="num"><strong>1 830</strong></td><td class="num">14</td></tr>
+        <tr class="hi"><td>Подяка клієнтам</td><td class="num">15</td><td class="num"><strong>1 830</strong></td><td class="num">7</td></tr>
+        <tr><td>Навчання</td><td class="num">8</td><td class="num">1 129</td><td class="num">2</td></tr>
+        <tr><td>Процедури</td><td class="num"><strong>80</strong></td><td class="num">994</td><td class="num">3</td></tr>
+        <tr><td>Продукти</td><td class="num"><strong>40</strong></td><td class="num">985</td><td class="num">2</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col">
+    <p><strong>120 із 223 публікацій — це процедури й продукти</strong>, тобто найслабший контент. Гумор, люди та подяки дають удвічі більше переглядів і втричі більше коментарів, але їх лише 56.</p>
+  </div>
+
+  <h3>Довгий підпис коштує третини охоплення</h3>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Підпис до Reels</th><th class="num">Публікацій</th><th class="num">Медіана переглядів</th></tr></thead>
+      <tbody>
+        <tr class="hi"><td>без заклику, короткий</td><td class="num">86</td><td class="num"><strong>1 417</strong></td></tr>
+        <tr><td>із закликом, короткий</td><td class="num">14</td><td class="num">1 052</td></tr>
+        <tr><td>із закликом, довгий</td><td class="num">76</td><td class="num">947</td></tr>
+        <tr><td>без заклику, довгий</td><td class="num">47</td><td class="num">924</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col">
+    <p>Довгий підпис знижує охоплення приблизно на третину — навіть коли в ньому немає жодного продажного заклику. Заклик забирає ще: 962 проти 1 231.</p>
+    <p>Це стосується <strong>охоплення</strong>, не продажів. Експертні тексти будують довіру й потрібні — але їхнє місце в каруселях, сторіс і закріплених, а не в підписі до Reels.</p>
+  </div>
+
+  <h3>Помилка, яку варто виправити сьогодні</h3>
+  <div class="col">
+    <p>У відео, опублікованому 31 серпня, опис починається словами: <em>«Ось більш живий і професійний варіант для TikTok, але з твоєю подачею:»</em> — у публікацію потрапив службовий текст із чату зі штучним інтелектом. Його видно всім.</p>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">04</span><h2>Що робить конкурентка інакше</h2></div>
+
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>Акаунт</th>
+          <th class="num">Підписників</th>
+          <th>Адреса в профілі</th>
+          <th>Ліцензія в біо</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>@la_belle… · La Belle</td>
+          <td class="num">125 000</td>
+          <td>сайт labelle.com.ua</td>
+          <td class="dim">—</td>
+        </tr>
+        <tr class="hi">
+          <td>@dr_pavliuk · Марія Павлюк</td>
+          <td class="num">9 763</td>
+          <td><span class="pill p-good">Соборна 12а</span></td>
+          <td><span class="pill p-good">МОЗ України</span></td>
+        </tr>
+        <tr>
+          <td>@cuba.clinic</td>
+          <td class="num">4 208</td>
+          <td class="dim">немає</td>
+          <td><span class="pill p-good">є</span></td>
+        </tr>
+        <tr>
+          <td>@face_expert_anna · Анна</td>
+          <td class="num">2 524</td>
+          <td class="dim">немає</td>
+          <td class="dim">немає</td>
+        </tr>
+        <tr>
+          <td>@alena_ludwik… · Альона <span class="pill p-good">партнер</span></td>
+          <td class="num">2 369</td>
+          <td class="dim">немає</td>
+          <td>«медична освіта»</td>
+        </tr>
+        <tr>
+          <td>@viktoriya_polyschuk</td>
+          <td class="num">2 265</td>
+          <td class="dim">немає</td>
+          <td>«медична освіта»</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Поле, яке коштує найдорожче</h3>
+  <div class="col">
+    <p>Instagram шукає людей за полем «Ім'я» — тим рядком, що стоїть під ніком. Це фактично заголовок у пошуку. Ось як ним розпорядилися:</p>
+  </div>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Акаунт</th><th>Що написано в полі «Ім'я»</th></tr></thead>
+      <tbody>
+        <tr class="hi"><td>La Belle</td><td>Anti-Age • Пігментація • Акне</td></tr>
+        <tr><td>Альона Людвик</td><td>Косметолог Хмельницький | Ботокс | Біоревіталізація</td></tr>
+        <tr><td>Марія Павлюк</td><td>Косметолог | Губи | Ботокс | Догляд за шкірою | Хмельницький</td></tr>
+        <tr><td>Анна Людвик</td><td><span class="dim">Анна Людвик |</span> Підбір догляду | Ін'єкції | Хмельницький</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col">
+    <p>La Belle віддала весь рядок під те, що люди вводять у пошук: «пігментація», «акне», «anti-age». Анна віддала третину рядка під власне прізвище — а прізвище не шукає ніхто, бо про неї ще не знають.</p>
+    <p>Друге, що варто перейняти в La Belle: замість посилання вони пишуть <strong>«Напиши "ПІДБІР" у Direct»</strong>. Слово в директі не вимагає нікуди йти — і Instagram не занижує такий пост за спробу вивести людину з платформи.</p>
+  </div>
+
+  <h3>Альона Людвик — це партнер, а не конкурент</h3>
+  <div class="col">
+    <p>Мама дружини, косметолог, працює в тому самому кабінеті. Разом два акаунти дають <strong>4 893 підписники</strong> в Instagram — але вони ніяк не підсилюють один одного: немає взаємних згадок, спільних рубрик, перехресних сторіс.</p>
+    <p>І в її біо є те, чого бракує Анні: <em>«Косметолог з медичною освітою · 1500+ щасливих клієнтів щороку · Роблю так, що твою красу сприймають за природну»</em>. Конкретна цифра, доказ кваліфікації і зрозуміла обіцянка. У Анни — «підбираю догляд, який дає результат», що міг би написати будь-хто.</p>
+  </div>
+
+  <div class="compare">
+    <div>
+      <h4>Марія Павлюк</h4>
+      <p class="who">9 763 підписники</p>
+      <p class="quote">Пігментацію неможливо просто «стерти» однією процедурою. Потрібно працювати з якістю та здатністю шкіри до відновлення.</p>
+      <p class="quote">Якість шкіри не має статі чи віку. Саме тому все більше чоловіків обирають професійні пілінги.</p>
+      <p class="quote">Коли сину було лише три місяці, я вже працювала. І робота не забрала в мене материнство.</p>
+    </div>
+    <div>
+      <h4>Анна Людвик</h4>
+      <p class="who">2 524 підписники</p>
+      <p class="quote">Для замовлення пишіть в приватне повідомлення</p>
+      <p class="quote">Для підбору догляду пишіть в приватне повідомлення</p>
+      <p class="quote">Для підбору домашнього догляду пишіть в особисті повідомлення</p>
+    </div>
+  </div>
+
+  <div class="col">
+    <p>Марія публікує <strong>рідше</strong>, ніж Анна. Різниця не в обсязі роботи, а в тому, що кожен її підпис щось дає читачеві — пояснення, спостереження, історію. Її пости можна читати, не купуючи. Пости Анни без покупки не мають сенсу.</p>
+    <p>Друга різниця — довіра. У Марії в біо стоїть медична освіта й ліцензія МОЗ, у профілі вказана адреса кабінету, а хайлайти розкладені за препаратами: Facetem, PolyPhil, Mastelli, Saypha. Клієнт за десять секунд бачить, що тут роблять саме те, що йому потрібно.</p>
+    <p>У Анни хайлайти називаються «Розвиток 2.0», «Розвиток 3.0», «КП губи 3.0», «КАДАВЕР ВЕРОНА». Це внутрішні назви — зрозумілі їй, але не клієнту.</p>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">05</span><h2>Сторіс і директ</h2></div>
+
+  <div class="col">
+    <p>Дві ділянки, яких не видно в загальній статистиці, — а саме там губиться найбільше. Сторіс дають <strong>17,4 %</strong> усіх переглядів Instagram, а директ — це взагалі єдине місце, де відбувається продаж.</p>
+  </div>
+
+  <h3>Один день сторіс: 6 публікацій</h3>
+  <div class="bars">
+    <div class="bar-row">
+      <span class="bar-label">13:34 <span class="dim">відео</span></span>
+      <span class="bar-track"><span class="bar-fill peak" style="width:100%"></span></span>
+      <span class="bar-val">147</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">14:47 <span class="dim">відео</span></span>
+      <span class="bar-track"><span class="bar-fill" style="width:85.7%"></span></span>
+      <span class="bar-val">126</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">14:59 <span class="dim">відео</span></span>
+      <span class="bar-track"><span class="bar-fill" style="width:81%"></span></span>
+      <span class="bar-val">119</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">14:59 <span class="dim">фото</span></span>
+      <span class="bar-track"><span class="bar-fill" style="width:78.9%"></span></span>
+      <span class="bar-val">116</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">17:00 <span class="dim">відео</span></span>
+      <span class="bar-track"><span class="bar-fill" style="width:70.7%"></span></span>
+      <span class="bar-val">104</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">19:02 <span class="dim">відео</span></span>
+      <span class="bar-track"><span class="bar-fill" style="width:46.3%"></span></span>
+      <span class="bar-val">68</span>
+    </div>
+  </div>
+
+  <div class="col">
+    <p><strong>147 переглядів при 2 524 підписниках — це 5,8 %.</strong> Здоровий показник для акаунта такого розміру — 10–20 %, тобто 250–500. Instagram майже не показує сторіс навіть власним підписникам, бо вони не дають жодних сигналів залученості.</p>
+    <p>До останньої сторіс доходить <strong>46 %</strong> тих, хто почав дивитися.</p>
+  </div>
+
+  <h3>Чому алгоритм їх не показує</h3>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Інтерактивний елемент</th><th>Використано за день</th></tr></thead>
+      <tbody>
+        <tr><td>Опитування</td><td><span class="pill p-crit">жодного</span></td></tr>
+        <tr><td>Наліпка з питанням</td><td><span class="pill p-crit">жодного</span></td></tr>
+        <tr><td>Посилання</td><td><span class="pill p-crit">жодного</span></td></tr>
+        <tr><td>Згадка акаунта</td><td><span class="pill p-crit">жодного</span></td></tr>
+        <tr><td>Хештег</td><td><span class="pill p-crit">жодного</span></td></tr>
+        <tr><td>Тест, повзунок, відлік</td><td><span class="pill p-crit">жодного</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>Шість сторіс — і жодного елемента, якого можна торкнутися. Кожен дотик є сигналом алгоритму, що контент цікавий; без них сторіс залишаються в найвужчому колі.</p>
+    <p>Наліпка з питанням до того ж дає <strong>готові теми для відео</strong> — той самий формат «Відповідь користувачу», який у TikTok зібрав 102 242 перегляди.</p>
+    <p>І окремо про посилання: за місяць у шапці профілю клікнули <strong>13 разів</strong>. У сторіс посилання клікають значно частіше. Шість сторіс на день — це близько 180 нагод на місяць поставити шлях на анкету чи прайс. Використано нуль.</p>
+  </div>
+
+  <h3>Директ: 80 % розмов обриваються</h3>
+  <div class="cards">
+    <div class="card">
+      <span class="k">Останнє слово за клієнтом</span>
+      <span class="v">16</span>
+      <span class="n">із 20 розмов<br><span class="pill p-crit">діалог не закрито</span></span>
+    </div>
+    <div class="card">
+      <span class="k">Відповіла Анна</span>
+      <span class="v">4</span>
+      <span class="n">із 20 розмов</span>
+    </div>
+    <div class="card">
+      <span class="k">Почалися з надісланого відео</span>
+      <span class="v">7</span>
+      <span class="n">найтепліші звернення</span>
+    </div>
+  </div>
+
+  <div class="col">
+    <p>У чотирьох із п'яти розмов останнє повідомлення написав співрозмовник. Продаж іде саме через директ — це кінець воронки, і кожна необроблена розмова тут коштує дорожче за будь-яку зміну в контенті.</p>
+    <p>Сім розмов почалися з того, що людина переслала reel. Це найтепліший тип звернення: вона вже подивилася контент і зацікавилась — імовірно, хоче спитати «а що це за засіб» або «а мені підійде». Такі повідомлення мають отримувати відповідь першими.</p>
+    <p class="dim" style="font-size:14.5px">Зміст листування не читався — зібрано лише зведені показники: хто написав останнім, коли, якого типу було повідомлення.</p>
+  </div>
+
+  <h3>Що робити зі сторіс і директом</h3>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Дія</th><th>Що дає</th></tr></thead>
+      <tbody>
+        <tr class="hi"><td>Автовідповідь на слово «анкета» / «підбір» / «ціна»</td><td>Ловить тих, хто пише вночі; знімає навантаження</td></tr>
+        <tr class="hi"><td>Правило: жодна розмова не лишається з останнім словом клієнта</td><td>Навіть «Дякую, записала вас» закриває діалог</td></tr>
+        <tr><td>Наліпка з питанням раз на тиждень</td><td>Відповіді стають темами відео</td></tr>
+        <tr><td>Опитування у другій сторіс щодня</td><td>Найдешевший спосіб підняти охоплення</td></tr>
+        <tr><td>Посилання в останній сторіс дня</td><td>Обхід обмеження в одне посилання в біо</td></tr>
+        <tr><td>Скоротити з 6 до 3–4 сторіс</td><td>Поки утримання не виросте</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">06</span><h2>Дрібниці, що коштують охоплення</h2></div>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Що</th><th>Як зараз</th><th>Наслідок</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Головний хештег</td>
+          <td><code>#косметологхмельницкий</code> — російською</td>
+          <td>Втрата україномовного пошуку — а це основна аудиторія міста</td>
+        </tr>
+        <tr>
+          <td>Кількість хештегів</td>
+          <td>3–5, майже завжди ті самі</td>
+          <td>Кількість нормальна — Instagram обмежив ліміт до 5. Проблема в тому, що вони не змінюються</td>
+        </tr>
+        <tr>
+          <td>Геомітка</td>
+          <td>«Хмельницкий» — російськомовна</td>
+          <td>Пости не потрапляють в українську локальну стрічку</td>
+        </tr>
+        <tr>
+          <td>Пости без тексту</td>
+          <td>щонайменше 8 із 40 — лише хештеги</td>
+          <td>Немає причини затриматися, зберегти чи прокоментувати</td>
+        </tr>
+        <tr>
+          <td>Контакти в Instagram</td>
+          <td>телефону, пошти й адреси немає</td>
+          <td>Немає кнопки «Подзвонити» й «Маршрут»; у TikTok телефон є</td>
+        </tr>
+        <tr>
+          <td>Підписки</td>
+          <td>574 в IG, 1 735 у TikTok</td>
+          <td>Ознака масфоловінгу; у сильного конкурента — 19</td>
+        </tr>
+        <tr>
+          <td>Посилання в біо TikTok</td>
+          <td>веде на Instagram</td>
+          <td>Воронка обривається — людина йде «дивитися далі», а не записуватися</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">07</span><h2>План на три місяці</h2></div>
+
+  <div class="col">
+    <p>Порядок має значення. Кожен крок спирається на попередній, а реклама йде останньою — заливати бюджет у ненастроєний акаунт означає просто витратити гроші.</p>
+  </div>
+
+  <div class="step">
+    <span class="step-n">0</span>
+    <div class="step-body">
+      <div class="tag-row"><span class="pill p-crit">цього тижня</span><span class="pill p-warn">не можна відкласти</span></div>
+      <h3>Урятувати статистику, поки вона не зникла</h3>
+      <ul class="todo">
+        <li>Вивантажити з Instagram Insights усе за доступний період</li>
+        <li>Вивантажити аналітику TikTok Studio</li>
+        <li>Скласти в таблицю: місяць, охоплення, підписки, збереження, переходи</li>
+      </ul>
+      <p class="step-why"><b>Навіщо:</b> Instagram стирає статистику через 90 днів, TikTok — через 60. Це єдина частина роботи, яку неможливо надолужити пізніше. Без цих даних ми ніколи не доведемо, що зміни спрацювали.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-n">1</span>
+    <div class="step-body">
+      <div class="tag-row"><span class="pill p-warn">тиждень 1</span></div>
+      <h3>Полагодити фундамент профілів</h3>
+      <ul class="todo">
+        <li>Перевести Instagram на Business і зв'язати з новою сторінкою Facebook</li>
+        <li>Створити справжню сторінку Facebook замість особистого профілю</li>
+        <li>Додати адресу кабінету, телефон і пошту в профіль Instagram</li>
+        <li>Замінити геомітку на україномовний «Хмельницький»</li>
+        <li>Перейменувати хайлайти мовою клієнта: «Ціни», «Губи», «Ботокс», «Догляд удома», «Відгуки», «Де я і як дістатися»</li>
+        <li>Виправити хештег на <code>#косметологхмельницький</code> і зробити кілька наборів по 5 тегів під різні теми</li>
+      </ul>
+      <p class="step-why"><b>Навіщо:</b> без бізнес-акаунта й сторінки Facebook неможливо ані запустити рекламу, ані побачити статистику. Адреса та кнопка дзвінка — це те, що перетворює перегляд на візит.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-n">2</span>
+    <div class="step-body">
+      <div class="tag-row"><span class="pill p-warn">тиждень 1–2</span></div>
+      <h3>Брендбук A.L. cosmetology</h3>
+      <ul class="todo">
+        <li>Зібрати наявні матеріали: іконку застосунку, палітру, презентацію-інтерв'ю</li>
+        <li>Зафіксувати кольори, шрифти, логотип у придатних форматах</li>
+        <li>Прописати голос бренду: як Анна говорить і чого не говорить</li>
+        <li>Зробити шаблони обкладинок для рубрик і сторіс</li>
+        <li>Сформулювати фішку одним реченням — те, чого немає в конкурентів</li>
+      </ul>
+      <p class="step-why"><b>Навіщо:</b> у конкурентки з 2 265 підписників фішка вміщується в одне речення: «натуральні губи — моя фішка». В Анни зараз дві різні обіцянки одночасно — підбір догляду та ін'єкції. Клієнт не запам'ятовує два повідомлення.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-n">3</span>
+    <div class="step-body">
+      <div class="tag-row"><span class="pill p-good">тиждень 2–4</span><span class="pill p-good">найбільший ефект</span></div>
+      <h3>Розділити платформи й повернути формат-переможець</h3>
+      <p style="margin:0 0 12px; font-weight:600; font-size:15px">TikTok — довге й експертне</p>
+      <ul class="todo">
+        <li><strong>Рейтинг «від 1 до 10» — щотижня.</strong> Сім таких відео дали в середньому по 100 тисяч переглядів</li>
+        <li>«Топ-3 / Топ-5» під конкретну проблему: суха шкіра, зона навколо очей, акне, пігментація</li>
+        <li>«Відповідь користувачу» на коментарі — 45 таких відео дали в середньому 4 791</li>
+        <li>Довжина 2–4 хвилини. Це не помилка: саме такі дають у 15 разів більше за короткі</li>
+        <li>Під пошукові запити: «ретинол як застосовувати», «ботокс скільки тримається» — третина трафіку йде з пошуку</li>
+      </ul>
+      <p style="margin:20px 0 12px; font-weight:600; font-size:15px">Instagram — коротке й людське</p>
+      <ul class="todo">
+        <li>Гумористичні сценки з чоловіком — одна на тиждень, за готовим сценарієм</li>
+        <li>Довжина 15–20 секунд. Не 30–60, як зараз найчастіше</li>
+        <li>Подяки клієнтам і особисте — вони дають удвічі більше за показ процедур</li>
+        <li>Підпис короткий. Довгий забирає третину охоплення</li>
+        <li>Перестати витрачати час на фото-пости — 0,9 % переглядів</li>
+        <li>Публікувати в пн і ср о 15–18, у вт о 12–15</li>
+      </ul>
+      <p style="margin:20px 0 12px; font-weight:600; font-size:15px">Спільне для обох</p>
+      <ul class="todo">
+        <li><strong>Говорити в кадрі українською</strong> — щоб алгоритм ніс ролик українцям, а не в Бразилію</li>
+        <li>Скоротити продажні пости: зараз 67 із 1 040 у TikTok і 120 із 223 в Instagram</li>
+        <li>Прибрати службовий текст ШІ з опису відео від 31 серпня</li>
+        <li>Запустити прямі ефіри «відповідаю на питання» — зараз їх нуль</li>
+      </ul>
+      <p class="step-why"><b>Навіщо:</b> на 1 422 публікаціях видно, що платформи винагороджують протилежне, а туди йде однаковий контент. Те саме відео «Топ 3 креми» дало 30 150 у TikTok і 911 в Instagram. Формати-переможці вже знайдені й перевірені — рейтинги в TikTok, короткі сценки в Instagram. Вигадувати нічого не треба: у листопаді 2025 рейтинги дали 771 тисячу переглядів за місяць, у серпні 2026 без них — 10 тисяч.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-n">4</span>
+    <div class="step-body">
+      <div class="tag-row"><span class="pill p-crit">головна проблема</span><span class="pill p-warn">місяць 2</span></div>
+      <h3>Полагодити шлях від перегляду до запису</h3>
+      <ul class="todo">
+        <li>Зробити сторінку-хаб: ціни, анкета, магазин, запис, адреса — одне посилання для всіх акаунтів</li>
+        <li>Опублікувати прайс. Зараз ціну неможливо дізнатися, не написавши в директ</li>
+        <li>Налаштувати автовідповідь у директ на слово «анкета» або «підбір»</li>
+        <li>Поставити в TikTok посилання на хаб, а не на Instagram</li>
+        <li>Прописати відповіді на типові питання: ціна, боляче, скільки триває, чи буде набряк</li>
+        <li><strong>Закривати кожну розмову в директі</strong> — зараз у 16 із 20 останнє слово за клієнтом</li>
+        <li>Додати опитування й наліпку з питанням у сторіс — зараз інтерактиву нуль, охоплення 5,8 %</li>
+        <li>Ставити посилання в останній сторіс дня</li>
+        <li>Додати доставку косметики по Україні та в Польщу — там 34 % аудиторії</li>
+        <li>Завести облік: звідки прийшов кожен клієнт</li>
+      </ul>
+      <p class="step-why"><b>Навіщо:</b> це найбільша втрата з усіх. 85 469 людей побачили контент, 764 зайшли в профіль, <b>13 натиснули посилання</b>. Навіть якщо охоплення подвоїти, без цього кроку результат подвоїться з нуля. Конкурентка La Belle замість посилання пише «Напиши "ПІДБІР" у Direct» — і не втрачає людину на переході.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-n">5</span>
+    <div class="step-body">
+      <div class="tag-row"><span class="pill p-good">місяць 2–3</span><span class="pill p-good">невикористаний ресурс</span></div>
+      <h3>Запустити YouTube</h3>
+      <ul class="todo">
+        <li>Створити канал і оформити його в стилі бренду</li>
+        <li>Перезалити найкращі вертикальні відео як Shorts — контент уже знято</li>
+        <li>Зняти 3–5 довгих відео: розбір догляду, чесно про ін'єкції, помилки клієнток</li>
+      </ul>
+      <p class="step-why"><b>Навіщо:</b> reels живе три дні, відео на YouTube приводить клієнтів роками. Це єдина платформа з повністю відкритою безкоштовною статистикою, і єдина, де вже знятий контент можна використати повторно без витрат.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-n">6</span>
+    <div class="step-body">
+      <div class="tag-row"><span class="pill p-warn">місяць 3</span><span class="pill p-warn">до $100</span></div>
+      <h3>Тестова реклама</h3>
+      <ul class="todo">
+        <li>Взяти пост, який уже добре зайшов органічно, і підсилити його</li>
+        <li>Географія: Хмельницький і 20 км навколо, жінки 25–45</li>
+        <li>Два оголошення на тиждень по $5 на день, порівняти результат</li>
+        <li>Рахувати не лайки, а звернення в директ і записи</li>
+      </ul>
+      <p class="step-why"><b>Навіщо:</b> реклама підсилює те, що вже працює, і не рятує те, що не працює. Тому вона стоїть шостою, а не першою. Просувати варто лише той пост, який органічно вже довів свою силу.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">08</span><h2>Хто що робить</h2></div>
+  <div class="split">
+    <div>
+      <h4>Беру на себе</h4>
+      <ul>
+        <li>Тексти всіх постів і сценарії відео</li>
+        <li>Брендбук і шаблони оформлення</li>
+        <li>Обкладинки, банери, графіку</li>
+        <li>Набори хештегів під кожну рубрику</li>
+        <li>Контент-план на місяць уперед</li>
+        <li>Розбір архіву з 1 070 відео</li>
+        <li>Налаштування реклами й звіти</li>
+        <li>Скрипти відповідей у директ</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Потрібно від вас</h4>
+      <ul>
+        <li>Зняти відео за готовим сценарієм</li>
+        <li>Опублікувати з готовим текстом</li>
+        <li>Відповідати людям у директі</li>
+        <li>Скинути скріншоти статистики раз на місяць</li>
+        <li>Сказати, що подобається, а що ні</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Дані зібрано 31.08.2026. Показники Instagram — зі статистики акаунта за останні 30 днів.<br>
+  Ще не зняте: демографія підписників (вік, стать, міста) та утримання на Reels — доступні лише в застосунку на телефоні.<br>
+  Статистика TikTok Studio теж чекає доступу. Публічні показники всіх акаунтів записуються щонеділі в журнал.
+</footer>
+
+</div>
+</body>
+</html>

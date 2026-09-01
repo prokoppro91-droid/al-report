@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light dark">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Порядок дій A.L. cosmetology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Onest:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --paper:#F7F4F1; --surface:#FFFFFF; --surface-2:#F1ECE7;
+    --ink:#241F1D; --ink-soft:#5C534E; --ink-faint:#948880; --rule:#DFD6CE;
+    --accent:#7B2E3E; --accent-dim:#B08792;
+    --good:#3D6B55; --warn:#9A6B22; --crit:#A6382F;
+    --good-bg:#E7EFE9; --warn-bg:#F6EDDD; --crit-bg:#F7E5E2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:#17130F; --surface:#201A17; --surface-2:#2A231F;
+      --ink:#F0E9E3; --ink-soft:#B8ABA2; --ink-faint:#8A7C73; --rule:#382F29;
+      --accent:#E39AA8; --accent-dim:#7E5560;
+      --good:#8CC0A2; --warn:#D6A961; --crit:#E8897E;
+      --good-bg:#1E2C24; --warn-bg:#2E2519; --crit-bg:#33201D;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:#17130F; --surface:#201A17; --surface-2:#2A231F;
+    --ink:#F0E9E3; --ink-soft:#B8ABA2; --ink-faint:#8A7C73; --rule:#382F29;
+    --accent:#E39AA8; --accent-dim:#7E5560;
+    --good:#8CC0A2; --warn:#D6A961; --crit:#E8897E;
+    --good-bg:#1E2C24; --warn-bg:#2E2519; --crit-bg:#33201D;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: "Onest", system-ui, -apple-system, sans-serif;
+    font-size: 16.5px; line-height: 1.62; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 26px 110px; }
+  .col { max-width: 660px; }
+
+  header { padding: 68px 0 40px; border-bottom: 1px solid var(--rule); margin-bottom: 20px; }
+  .eyebrow {
+    font-family: "JetBrains Mono", monospace; font-size: 11.5px;
+    letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint); margin: 0 0 18px;
+  }
+  h1 {
+    font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600;
+    font-size: clamp(38px, 6.4vw, 62px); line-height: 1.03; letter-spacing: -.015em;
+    margin: 0 0 20px; text-wrap: balance;
+  }
+  h1 em { font-style: italic; color: var(--accent); }
+  .standfirst { font-size: 18.5px; line-height: 1.55; color: var(--ink-soft); max-width: 620px; margin: 0; font-weight: 300; }
+
+  h2 {
+    font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600;
+    font-size: clamp(26px, 3.4vw, 34px); line-height: 1.12; margin: 0; letter-spacing: -.01em;
+  }
+  h3 { font-size: 16.5px; font-weight: 600; margin: 30px 0 10px; }
+  p { margin: 0 0 16px; }
+  .col p, .col ul, .col ol { max-width: 660px; }
+  strong { font-weight: 600; }
+  ul, ol { padding-left: 20px; margin: 0 0 16px; }
+  li { margin-bottom: 7px; }
+  li::marker { color: var(--ink-faint); }
+  a { color: var(--accent); }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  /* фази */
+  .phase { margin: 54px 0 0; }
+  .phase-head {
+    display: flex; align-items: baseline; gap: 14px;
+    border-bottom: 1px solid var(--rule); padding-bottom: 11px; margin-bottom: 8px;
+  }
+  .phase-when {
+    font-family: "JetBrains Mono", monospace; font-size: 11.5px;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--accent); flex: none;
+  }
+  .phase-goal {
+    font-size: 15px; color: var(--ink-soft); margin: 0 0 22px; max-width: 660px;
+  }
+
+  /* крок */
+  .step {
+    background: var(--surface); border: 1px solid var(--rule);
+    margin-bottom: 12px;
+  }
+  .step > summary {
+    padding: 16px 20px; cursor: pointer; list-style: none;
+    display: flex; align-items: center; gap: 13px;
+    font-weight: 500; font-size: 15.5px;
+  }
+  .step > summary::-webkit-details-marker { display: none; }
+  .step > summary::after {
+    content: "+"; margin-left: auto; color: var(--ink-faint);
+    font-family: "JetBrains Mono", monospace; font-size: 17px; flex: none;
+  }
+  .step[open] > summary::after { content: "–"; }
+  .step[open] > summary { border-bottom: 1px solid var(--rule); }
+  .step-num {
+    font-family: "JetBrains Mono", monospace; font-size: 11.5px;
+    color: var(--accent); flex: none; min-width: 22px;
+  }
+  .who {
+    font-family: "JetBrains Mono", monospace; font-size: 10px;
+    letter-spacing: .07em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; flex: none; white-space: nowrap;
+  }
+  .w-me { background: var(--good-bg); color: var(--good); }
+  .w-you { background: var(--warn-bg); color: var(--warn); }
+  .w-both { background: var(--surface-2); color: var(--ink-soft); }
+  .step-body { padding: 18px 20px 20px; }
+  .step-body > *:last-child { margin-bottom: 0; }
+  .why {
+    background: var(--surface-2); border-left: 2px solid var(--accent-dim);
+    padding: 12px 15px; font-size: 14.5px; line-height: 1.5; color: var(--ink-soft); margin: 14px 0 0;
+  }
+  .why b { color: var(--ink); font-weight: 600; }
+  .todo { list-style: none; padding-left: 0; margin-bottom: 0; }
+  .todo li { padding-left: 25px; position: relative; margin-bottom: 8px; font-size: 15px; }
+  .todo li::before {
+    content: ""; position: absolute; left: 0; top: 6px;
+    width: 12px; height: 12px; border: 1px solid var(--accent-dim);
+  }
+
+  .scroll { overflow-x: auto; margin-bottom: 18px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 460px; }
+  th {
+    text-align: left; font-family: "JetBrains Mono", monospace; font-size: 10.5px;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint);
+    font-weight: 400; padding: 0 13px 8px 0; border-bottom: 1px solid var(--rule);
+  }
+  td { padding: 10px 13px 10px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  td.num, th.num { font-family: "JetBrains Mono", monospace; font-variant-numeric: tabular-nums; text-align: right; padding-right: 0; }
+  .dim { color: var(--ink-faint); }
+
+  .callout {
+    background: var(--surface); border: 1px solid var(--rule);
+    border-left: 3px solid var(--accent); padding: 24px 26px; margin: 0 0 34px;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout .lead {
+    font-family: "Cormorant Garamond", Georgia, serif; font-size: 23px;
+    line-height: 1.28; margin-bottom: 12px;
+  }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px,1fr)); gap:1px; background: var(--rule); border: 1px solid var(--rule); margin-bottom: 30px; }
+  .card { background: var(--surface); padding: 20px; display:flex; flex-direction:column; gap:4px; }
+  .card .k { font-family:"JetBrains Mono",monospace; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-faint); }
+  .card .v { font-family:"Cormorant Garamond",Georgia,serif; font-size:38px; line-height:1.05; font-variant-numeric:tabular-nums; }
+  .card .n { font-size:13.5px; color:var(--ink-soft); line-height:1.4; }
+
+  .legend { display:flex; flex-wrap:wrap; gap:14px; margin: 26px 0 0; font-size: 13.5px; color: var(--ink-soft); align-items:center; }
+
+  footer {
+    margin-top: 80px; padding-top: 24px; border-top: 1px solid var(--rule);
+    font-family: "JetBrains Mono", monospace; font-size: 11.5px;
+    letter-spacing: .05em; color: var(--ink-faint); line-height: 1.8;
+  }
+  @media (max-width: 600px) {
+    .wrap { padding: 0 18px 70px; }
+    .step > summary { flex-wrap: wrap; gap: 9px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">Порядок дій · вересень — листопад 2026</p>
+  <h1>Спершу <em>полагодити</em>, потім знімати</h1>
+  <p class="standfirst">Що робити далі з Instagram і TikTok кабінету A.L. cosmetology — по кроках, у порядку важливості, з поділом хто що робить.</p>
+</header>
+
+<div class="legend">
+  <span class="who w-me">роблю я</span> <span class="who w-you">потрібна Анна</span> <span class="who w-both">разом</span>
+  <span class="dim">· натисніть на крок, щоб розгорнути</span>
+</div>
+
+<div class="phase">
+  <div class="phase-head"><span class="phase-when">Чому саме так</span></div>
+  <div class="callout col">
+    <p class="lead">Контент не є вузьким місцем. Вузьке місце — те, що відбувається після перегляду.</p>
+    <p>85 469 людей побачили контент за місяць. У профіль зайшли 764. Посилання натиснули 13. Нових підписників — один.</p>
+    <p style="margin-bottom:0">Тому перші два тижні ми не чіпаємо зйомку взагалі. Спершу лагодимо профіль, прайс і директ — інакше кожне нове відео так само впиратиметься в стіну.</p>
+  </div>
+
+  <div class="cards">
+    <div class="card"><span class="k">Питали про запис</span><span class="v">220</span><span class="n">разів у директі</span></div>
+    <div class="card"><span class="k">Питали ціну</span><span class="v">190</span><span class="n">Анна писала вручну 184 рази</span></div>
+    <div class="card"><span class="k">Питали адресу</span><span class="v">77</span><span class="n">адреси в профілі немає</span></div>
+    <div class="card"><span class="k">Подяк від клієнтів</span><span class="v">596</span><span class="n">відгуки, які ніхто не збирає</span></div>
+  </div>
+</div>
+
+<div class="phase">
+  <div class="phase-head"><span class="phase-when">Тиждень 1</span><h2>Фундамент</h2></div>
+  <p class="phase-goal">Найдешевші зміни з найбільшим ефектом. Жодної зйомки — тільки налаштування й тексти.</p>
+
+  <details class="step" open>
+    <summary><span class="step-num">1.1</span><span>Прайс — головне, чого бракує</span><span class="who w-you">потрібна Анна</span></summary>
+    <div class="step-body">
+      <ul class="todo">
+        <li>Анна диктує або пише список: процедура — ціна, засіб — ціна</li>
+        <li>Я оформлю в чистий прайс і зроблю картинку для закріпленого хайлайту</li>
+        <li>Окремо — «від» ціни для складних процедур, щоб не лякати цифрою</li>
+      </ul>
+      <p class="why"><b>Навіщо:</b> 190 запитів про ціну, і 184 рази Анна писала суму вручну. З листування вже видно діапазон: 250, 400, 450, 500, 600, 950, 1000, 1100, 1200, 1500, 1800, 1900, 2000, 4800, 5000 грн. Прайс економить години щомісяця й знімає бар'єр для тих, хто соромиться питати.</p>
+    </div>
+  </details>
+
+  <details class="step">
+    <summary><span class="step-num">1.2</span><span>Налаштування профілю Instagram</span><span class="who w-both">разом</span></summary>
+    <div class="step-body">
+      <ul class="todo">
+        <li>Перевести акаунт із Creator на <strong>Business</strong></li>
+        <li>Додати адресу кабінету → з'явиться кнопка «Маршрут»</li>
+        <li>Додати телефон +380974772331 → кнопка «Подзвонити»</li>
+        <li>Додати пошту → кнопка «Ел. пошта»</li>
+        <li><strong>Вимкнути «Показувати рекомендації облікових записів у профілях»</strong></li>
+        <li>Дописати в біо доказ кваліфікації — є запас 49 символів зі 150</li>
+      </ul>
+      <p class="why"><b>Навіщо:</b> 77 разів питали, як знайти кабінет — люди губляться в IQ Center. Кнопки «Маршрут» просто не існує, бо адреси немає. А перемикач рекомендацій зараз показує <b>конкурентів прямо у профілі Анни</b>.<br>У біо Альони є те, чого бракує тут: «медична освіта», «1500+ щасливих клієнтів щороку».</p>
+    </div>
+  </details>
+
+  <details class="step">
+    <summary><span class="step-num">1.3</span><span>Автовідповідь у директі</span><span class="who w-both">разом</span></summary>
+    <div class="step-body">
+      <ul class="todo">
+        <li>Я пишу тексти автовідповідей на слова «ціна», «прайс», «анкета», «запис»</li>
+        <li>Анна вмикає їх у застосунку: Налаштування → Повідомлення → Швидкі відповіді</li>
+        <li>Створити 5 шаблонів: прайс, запис, адреса, анкета, «боляче?»</li>
+      </ul>
+      <p class="why"><b>Навіщо:</b> 42 % відповідей ідуть за 15 хвилин — це добре. Але <b>18 % питань чекають понад добу</b>, а 12 % людей пишуть уночі. Автовідповідь ловить їх одразу.<br>І головне: анкету запропоновано <b>16 разів на 4 781</b> повідомлення. Інструмент, на який веде єдине посилання в профілі, просто не використовується.</p>
+    </div>
+  </details>
+
+  <details class="step">
+    <summary><span class="step-num">1.4</span><span>Правило закритого діалогу</span><span class="who w-you">потрібна Анна</span></summary>
+    <div class="step-body">
+      <ul class="todo">
+        <li>Жодна розмова не лишається з останнім словом клієнта</li>
+        <li>Навіть коротке «Дякую, чекаємо вас» закриває діалог</li>
+        <li>Спершу відповідати тим, хто переслав відео — це найтепліші звернення</li>
+      </ul>
+      <p class="why"><b>Навіщо:</b> у 72 % розмов останнє повідомлення написала людина, а в 17 % розмов Анна не відповіла жодного разу. Продаж іде через директ — це кінець воронки, і тут втрачається найбільше.</p>
+    </div>
+  </details>
+
+  <details class="step">
+    <summary><span class="step-num">1.5</span><span>Сторінка Facebook</span><span class="who w-both">разом</span></summary>
+    <div class="step-body">
+      <ul class="todo">
+        <li>Створити Сторінку: Facebook → Сторінки → Створити сторінку</li>
+        <li>Назва, категорія, адреса, графік роботи, кнопка дії</li>
+        <li>Запросити друзів підписатися</li>
+        <li>Прив'язати до Instagram у Meta Business Suite</li>
+      </ul>
+      <p class="why"><b>Навіщо:</b> зараз Facebook — особистий профіль. Без Сторінки неможливо запустити нормальну рекламу й підключити статистику. Перетворити профіль на Сторінку не можна, тільки створити нову — особистий профіль Анни при цьому лишається недоторканим.</p>
+    </div>
+  </details>
+</div>
+
+<div class="phase">
+  <div class="phase-head"><span class="phase-when">Тиждень 2</span><h2>Воронка</h2></div>
+  <p class="phase-goal">Щоб людині після перегляду було куди піти й що зробити.</p>
+
+  <details class="step">
+    <summary><span class="step-num">2.1</span><span>Сторінка-хаб: одне посилання замість усього</span><span class="who w-me">роблю я</span></summary>
+    <div class="step-body">
+      <p>Одна сторінка, на яку ведуть усі акаунти — Анни, Альони, TikTok, Facebook:</p>
+      <ul class="todo">
+        <li>Ціни на послуги</li>
+        <li>Запис — кнопки Telegram, Viber, WhatsApp, дзвінок</li>
+        <li>Анкета підбору догляду</li>
+        <li>Магазин косметики</li>
+        <li>Де ми — адреса, карта, як зайти в потрібний корпус</li>
+        <li>Відгуки</li>
+      </ul>
+      <p class="why"><b>Навіщо:</b> зараз в Instagram одне посилання веде на бота, в TikTok — на Instagram, а прайсу немає ніде. За місяць посилання натиснули 13 разів. Хаб дає людині все за один клік і працює для всіх акаунтів одразу.<br>⚠️ Посилання в біо Instagram міняється <b>тільки з телефона</b>.</p>
+    </div>
+  </details>
+
+  <details class="step">
+    <summary><span class="step-num">2.2</span><span>Перестати виводити людей у Viber</span><span class="who w-you">потрібна Анна</span></summary>
+    <div class="step-body">
+      <ul class="todo">
+        <li>Відповідати там, де людина написала</li>
+        <li>Viber — лише якщо клієнт сам попросив</li>
+        <li>Фото шкіри можна приймати прямо в директ</li>
+      </ul>
+      <p class="why"><b>Навіщо:</b> у TikTok видно відповіді «напишіть на Вайбер +380…» і «Напишіть в інстаграм». Кожен перехід губить частину людей. У TikTok 4 083 підписники й 81 % українців — це найякісніша аудиторія, і саме її виводять у месенджер, де немає ні статистики, ні контенту.</p>
+    </div>
+  </details>
+
+  <details class="step">
+    <summary><span class="step-num">2.3</span><span>Хайлайти мовою клієнта</span><span class="who w-both">разом</span></summary>
+    <div class="step-body">
+      <div class="scroll">
+        <table>
+          <thead><tr><th>Зараз</th><th>Стане</th></tr></thead>
+          <tbody>
+            <tr><td class="dim">Розвиток 2.0, Розвиток 3.0</td><td>Ціни</td></tr>
+            <tr><td class="dim">КП губи, КП губи 2.0, КП губи 3.0</td><td>Губи</td></tr>
+            <tr><td class="dim">КАДАВЕР ВЕРОНА</td><td>Навчання</td></tr>
+            <tr><td class="dim">Мунджаро</td><td>Схуднення</td></tr>
+            <tr><td>Ботокс, Процедури, Косметика</td><td>лишаємо</td></tr>
+            <tr><td>Відгуки <span class="dim">(двічі)</span></td><td>об'єднати в один</td></tr>
+            <tr><td class="dim">—</td><td><strong>Як нас знайти</strong> — новий</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="why"><b>Навіщо:</b> «Розвиток 3.0» зрозуміло Анні, але не клієнтці. Хайлайти — це меню профілю: людина за десять секунд має побачити, що тут роблять саме те, що їй потрібно. У Марії Павлюк вони розкладені за препаратами — і в неї 9 763 підписники.</p>
+    </div>
+  </details>
+
+  <details class="step">
+    <summary><span class="step-num">2.4</span><span>Зібрати відгуки з листування</span><span class="who w-me">роблю я</span></summary>
+    <div class="step-body">
+      <ul class="todo">
+        <li>Витягну подяки з листування (їх 596)</li>
+        <li>Оформлю в картки для хайлайту «Відгуки»</li>
+        <li>Анна перевірить, які можна публікувати</li>
+      </ul>
+      <p class="why"><b>Навіщо:</b> 596 подяк — це 11,9 % усіх повідомлень від клієнтів. Готовий соціальний доказ, який лежить мертвим вантажем у директі. Публікувати без дозволу людей не будемо — оформимо знеособлено або спитаємо.</p>
+    </div>
+  </details>
+</div>
+
+<div class="phase">
+  <div class="phase-head"><span class="phase-when">Тижні 3–4</span><h2>Контент</h2></div>
+  <p class="phase-goal">Тільки тепер беремося за зйомку — коли є куди вести людей.</p>
+
+  <details class="step">
+    <summary><span class="step-num">3.1</span><span>TikTok: повернути рейтинги</span><span class="who w-both">разом</span></summary>
+    <div class="step-body">
+      <ul class="todo">
+        <li>«Розставляю бренди від 1 до 10» — щотижня, 2–4 хвилини</li>
+        <li>«Топ-3 / Топ-5» під проблему: суха шкіра, зона навколо очей, акне, пігментація</li>
+        <li>«Відповідь користувачу» на коментарі — раз на тиждень</li>
+        <li>Я пишу сценарій і структуру, Анна знімає</li>
+      </ul>
+      <p class="why"><b>Навіщо:</b> сім таких відео дали в середньому <b>100 065</b> переглядів. Продажні «в наявності, пишіть у директ» — 1 323, і їх зроблено 67. Різниця у 75 разів.<br>У листопаді 2025, коли виходили рейтинги, місяць дав 771 595 переглядів. У серпні 2026 без них — 10 804.</p>
+    </div>
+  </details>
+
+  <details class="step">
+    <summary><span class="step-num">3.2</span><span>Instagram: короткі сценки</span><span class="who w-both">разом</span></summary>
+    <div class="step-body">
+      <ul class="todo">
+        <li>Гумористичні сценки з чоловіком — одна на тиждень</li>
+        <li>Довжина <strong>15–20 секунд</strong>, не 30–60</li>
+        <li>Говорити в кадрі українською, згадувати місто</li>
+        <li>Підпис короткий; довгий забирає третину охоплення</li>
+        <li>Публікувати пн і ср о 15–18, вт о 12–15</li>
+      </ul>
+      <p class="why"><b>Навіщо:</b> платформи винагороджують протилежне. Те саме відео «Топ 3 креми» дало 30 150 у TikTok і 911 в Instagram. В Instagram виграють 15–20 секунд, а найбільше знято саме в найгіршому діапазоні 30–60 секунд.<br>І про мову: вірусна сценка без слів зібрала 137 854 перегляди, але рознеслася в Бразилію та Індонезію — тому дала лише п'ятьох підписників.</p>
+    </div>
+  </details>
+
+  <details class="step">
+    <summary><span class="step-num">3.3</span><span>Сторіс з інтерактивом</span><span class="who w-you">потрібна Анна</span></summary>
+    <div class="step-body">
+      <ul class="todo">
+        <li>Скоротити з 6 до 3–4 сторіс на день</li>
+        <li>У другій — опитування або повзунок</li>
+        <li>Раз на тиждень — наліпка з питанням</li>
+        <li>В останній сторіс дня — посилання на хаб</li>
+      </ul>
+      <p class="why"><b>Навіщо:</b> за цілий день не було <b>жодного</b> інтерактивного елемента — ні опитувань, ні питань, ні посилань. Тому охоплення сторіс лише 5,8 % при нормі 10–20 %.<br>А наліпка з питанням дає готові теми для відео: формат «Відповідь користувачу» у TikTok зібрав 102 242 перегляди.</p>
+    </div>
+  </details>
+
+  <details class="step">
+    <summary><span class="step-num">3.4</span><span>Відео на теми з листування</span><span class="who w-me">роблю я</span></summary>
+    <div class="step-body">
+      <div class="scroll">
+        <table>
+          <thead><tr><th>Що написали люди</th><th>Відео</th></tr></thead>
+          <tbody>
+            <tr><td>«Ми в айкю центрі, але напевно не в той корпус зайшли»</td><td><strong>Як нас знайти</strong> — маршрут від входу</td></tr>
+            <tr><td>«От тому я боюсь до когось звертатися»</td><td><strong>Про страх</strong> — що відчувається, чого чекати</td></tr>
+            <tr><td>«А форму можна обирати», «А потім тверді не будуть»</td><td>Відповіді про губи</td></tr>
+            <tr><td>190 запитів про ціну</td><td>З чого складається вартість процедури</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="why"><b>Навіщо:</b> це не вигадані теми, а реальні питання клієнтів, повторені сотні разів. Відповідь на них знімає заперечення ще до того, як людина напише.</p>
+    </div>
+  </details>
+</div>
+
+<div class="phase">
+  <div class="phase-head"><span class="phase-when">Місяць 2</span><h2>Розширення</h2></div>
+  <p class="phase-goal">Коли основа працює — додаємо канали й системність.</p>
+
+  <details class="step">
+    <summary><span class="step-num">4.1</span><span>Брендбук A.L. cosmetology</span><span class="who w-me">роблю я</span></summary>
+    <div class="step-body">
+      <ul class="todo">
+        <li>Зібрати наявне: іконку застосунку, палітру, презентацію-інтерв'ю</li>
+        <li>Зафіксувати кольори, шрифти, логотип у робочих форматах</li>
+        <li>Голос бренду: як Анна говорить і чого не говорить</li>
+        <li>Шаблони обкладинок для рубрик і сторіс</li>
+        <li>Фішка одним реченням</li>
+      </ul>
+      <p class="why"><b>Навіщо:</b> у Вікторії Поліщук при 2 265 підписниках фішка вміщується в рядок: «натуральні губи — моя фішка». В Анни зараз дві обіцянки одночасно — підбір догляду й ін'єкції. Клієнт не запам'ятовує дві.<br>Плюс брендбук — це те, що можна віддати будь-кому найнятому.</p>
+    </div>
+  </details>
+
+  <details class="step">
+    <summary><span class="step-num">4.2</span><span>YouTube з нуля</span><span class="who w-both">разом</span></summary>
+    <div class="step-body">
+      <ul class="todo">
+        <li>Створити канал, оформити в стилі бренду</li>
+        <li>Перезалити найкращі вертикальні відео як Shorts</li>
+        <li>3–5 довгих відео: розбір догляду, чесно про ін'єкції, помилки клієнток</li>
+      </ul>
+      <p class="why"><b>Навіщо:</b> reels живе три дні, відео на YouTube приводить клієнтів роками. Це єдина платформа з повністю відкритою безкоштовною статистикою. Контент уже знято — 1 040 відео чекають.</p>
+    </div>
+  </details>
+
+  <details class="step" open>
+    <summary><span class="step-num">4.3</span><span>Доставка по Україні та світу</span><span class="who w-both">разом</span></summary>
+    <div class="step-body">
+      <p>Окремий напрям продажу, який не потребує, щоб людина приїхала в кабінет.</p>
+      <ul class="todo">
+        <li>Додати рядок «📦 Доставка по Україні та світу» в біо всіх акаунтів</li>
+        <li>Оформити відправку: Нова Пошта по Україні, Meest або Нова Пошта Global за кордон</li>
+        <li>Окремий блок доставки й оплати на сторінці-хабі</li>
+        <li>Продумати оплату для діаспори — картка, IBAN, PayPal</li>
+        <li>Зв'язати магазин @cosmetics_store__a.l із хабом</li>
+        <li>Окремі пости для тих, хто не може приїхати: «підбір догляду онлайн + доставка»</li>
+      </ul>
+      <p class="why"><b>Навіщо:</b> 34,1 % аудиторії Instagram — Польща, ще кілька відсотків — Чехія, Німеччина, Італія, Іспанія. На ін'єкції вони не приїдуть, але косметику купувати можуть — і саме вони найплатоспроможніші.<br><br>Ця модель уже працює в конкурентів: <b>La Belle</b> зі 125 тисячами підписників пише «📦 Доставка по Україні та світу», <b>@innacosmetol</b> з 479 тисячами — «Приймаю по всьому світу», а <b>@solobeauty.pl</b> побудував бізнес виключно на корейській косметиці для українців у Польщі. Українські магазини косметики в TikTok мають сотні тисяч підписників: @shoptop_cosmetic — 562 600, @gtm_cosmetics — 374 800.</p>
+    </div>
+  </details>
+
+  <details class="step">
+    <summary><span class="step-num">4.4</span><span>Зв'язати акаунти з Альоною</span><span class="who w-both">разом</span></summary>
+    <div class="step-body">
+      <ul class="todo">
+        <li>Взаємні згадки в профілях</li>
+        <li>Спільні відео — дві косметологині, один кабінет</li>
+        <li>Перехресні сторіс</li>
+      </ul>
+      <p class="why"><b>Навіщо:</b> разом два акаунти дають 4 893 підписники, але зараз ніяк не підсилюють один одного. Мати й дочка в одному кабінеті — це готова історія, яка сама по собі цікава людям.</p>
+    </div>
+  </details>
+</div>
+
+<div class="phase">
+  <div class="phase-head"><span class="phase-when">Місяць 3</span><h2>Реклама</h2></div>
+  <p class="phase-goal">Останньою — бо вона підсилює те, що вже працює, і не рятує того, що не працює.</p>
+
+  <details class="step">
+    <summary><span class="step-num">5.1</span><span>Тестовий бюджет до $100</span><span class="who w-me">роблю я</span></summary>
+    <div class="step-body">
+      <ul class="todo">
+        <li>Просувати пост, який уже добре зайшов органічно</li>
+        <li>Географія: Хмельницький і 20 км навколо</li>
+        <li>Аудиторія: жінки 25–44 — це 75,8 % наявних підписників</li>
+        <li>Два оголошення на тиждень по $5 на день</li>
+        <li>Рахувати не лайки, а звернення в директ і записи</li>
+      </ul>
+      <p class="why"><b>Навіщо:</b> демографія вже ідеальна — жінки 89,8 %, вік 25–44 — 75,8 %. Реклама лише розширить те саме коло на місто. Але без прайсу й хабу вона просто приведе людей у ту саму стіну, тому й стоїть п'ятою.</p>
+    </div>
+  </details>
+</div>
+
+<div class="phase">
+  <div class="phase-head"><span class="phase-when">Постійно</span><h2>Рутина</h2></div>
+  <p class="phase-goal">Те, що працює у фоні без нагадувань.</p>
+
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Коли</th><th>Що</th><th>Хто</th></tr></thead>
+      <tbody>
+        <tr><td>Щонеділі</td><td>Знімаю статистику всіх акаунтів у журнал</td><td><span class="who w-me">я</span></td></tr>
+        <tr><td>Щонеділі</td><td>Готую тексти й сценарії на тиждень</td><td><span class="who w-me">я</span></td></tr>
+        <tr><td>Щодня</td><td>Закривати діалоги в директі</td><td><span class="who w-you">Анна</span></td></tr>
+        <tr><td>Щомісяця</td><td>Експорт статистики, поки не стерлася</td><td><span class="who w-me">я</span></td></tr>
+        <tr><td>Щомісяця</td><td>Скільки клієнтів прийшло з соцмереж</td><td><span class="who w-you">Анна</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout col" style="margin-top:26px">
+    <p class="lead" style="margin-bottom:10px">Одна річ, яку не можна відкласти</p>
+    <p style="margin-bottom:0">Instagram стирає статистику через 90 днів, TikTok — через 60. Усе інше можна зробити й через місяць. Ці дані — ні. Журнал уже заведено, перший зріз збережено.</p>
+  </div>
+</div>
+
+<div class="phase">
+  <div class="phase-head"><span class="phase-when">Від вас</span><h2>Що потрібно, щоб почати</h2></div>
+  <div class="col">
+    <p>Три речі, без яких я не зрушу далі:</p>
+    <ol>
+      <li><strong>Прайс</strong> — список процедур і засобів із цінами. Хоч голосовим, хоч фото списку.</li>
+      <li><strong>Адреса кабінету</strong> повністю — з корпусом і поверхом, бо люди губляться.</li>
+      <li><strong>Авторизувати Buffer</strong> — у терміналі команда <code>/mcp</code>, вибрати buffer, увійти.</li>
+    </ol>
+    <p>Решту першого тижня я зроблю сам і принесу готове на перевірку.</p>
+  </div>
+</div>
+
+<footer>
+  Складено 01.09.2026 на основі аудиту: 1 422 публікації, 13 840 повідомлень у директі, статистика обох акаунтів.<br>
+  Порядок кроків визначено даними, а не звичкою: спершу те, що коштує найдорожче зараз.
+</footer>
+
+</div>
+</body>
+</html>

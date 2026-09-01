@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light dark">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Тексти на перший тиждень</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Onest:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --paper:#FBF8F5; --surface:#FFFFFF; --surface-2:#F3EEE9; --rose:#F9EFEF;
+    --ink:#241F1D; --ink-soft:#5C534E; --ink-faint:#9A8E86; --rule:#E3DAD2;
+    --accent:#7B2E3E; --accent-dim:#C2A0A8;
+    --good:#3D6B55; --good-bg:#E8F0EA; --warn:#9A6B22; --warn-bg:#F8F0E1;
+    --crit:#A6382F; --crit-bg:#F9E7E4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:#171310; --surface:#211B18; --surface-2:#2B2420; --rose:#2C1F21;
+      --ink:#F2EBE5; --ink-soft:#BBAEA5; --ink-faint:#8B7D74; --rule:#3A312B;
+      --accent:#E7A2AF; --accent-dim:#7F5762;
+      --good:#8EC2A4; --good-bg:#1F2D25; --warn:#D8AB63; --warn-bg:#2F261A;
+      --crit:#EA8B80; --crit-bg:#34211E;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:#171310; --surface:#211B18; --surface-2:#2B2420; --rose:#2C1F21;
+    --ink:#F2EBE5; --ink-soft:#BBAEA5; --ink-faint:#8B7D74; --rule:#3A312B;
+    --accent:#E7A2AF; --accent-dim:#7F5762;
+    --good:#8EC2A4; --good-bg:#1F2D25; --warn:#D8AB63; --warn-bg:#2F261A;
+    --crit:#EA8B80; --crit-bg:#34211E;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: "Onest", system-ui, -apple-system, sans-serif;
+    font-size: 16.5px; line-height: 1.62; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 100px; }
+
+  header { padding: 56px 0 34px; border-bottom: 1px solid var(--rule); margin-bottom: 34px; }
+  .kicker {
+    font-family: "JetBrains Mono", monospace; font-size: 10.5px;
+    letter-spacing: .18em; text-transform: uppercase; color: var(--accent); margin: 0 0 16px;
+  }
+  h1 {
+    font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600;
+    font-size: clamp(34px, 6vw, 52px); line-height: 1.05; margin: 0 0 16px; letter-spacing: -.015em;
+  }
+  .lede { font-size: 17px; color: var(--ink-soft); margin: 0; font-weight: 300; }
+
+  h2 {
+    font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600;
+    font-size: clamp(24px, 3.6vw, 32px); margin: 52px 0 6px; line-height: 1.15;
+    display: flex; align-items: baseline; gap: 12px;
+  }
+  h2 .n {
+    font-family: "JetBrains Mono", monospace; font-size: 12px;
+    color: var(--accent); flex: none; letter-spacing: .06em;
+  }
+  .hint { font-size: 15px; color: var(--ink-soft); margin: 0 0 20px; }
+  h3 { font-size: 16px; font-weight: 600; margin: 26px 0 10px; }
+  p { margin: 0 0 15px; }
+  ul, ol { padding-left: 20px; margin: 0 0 15px; }
+  li { margin-bottom: 7px; }
+  li::marker { color: var(--accent-dim); }
+  strong { font-weight: 600; }
+
+  .copybox { border: 1px solid var(--rule); background: var(--surface); margin: 0 0 14px; }
+  .copybox-head {
+    display: flex; align-items: center; gap: 10px; padding: 10px 14px;
+    border-bottom: 1px solid var(--rule); background: var(--surface-2);
+    font-family: "JetBrains Mono", monospace; font-size: 10.5px;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint);
+  }
+  .copybox-head .rec { color: var(--good); }
+  .copybox pre {
+    margin: 0; padding: 16px 18px; white-space: pre-wrap; word-wrap: break-word;
+    font-family: "Onest", sans-serif; font-size: 15.5px; line-height: 1.55;
+  }
+  .cbtn {
+    margin-left: auto; border: 1px solid var(--rule); background: var(--paper);
+    color: var(--ink-soft); font-family: "JetBrains Mono", monospace; font-size: 10.5px;
+    letter-spacing: .08em; text-transform: uppercase; padding: 5px 11px;
+    cursor: pointer; border-radius: 2px; flex: none;
+  }
+  .cbtn:hover { border-color: var(--accent-dim); color: var(--accent); }
+  .cbtn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .cbtn.done { color: var(--good); border-color: var(--good); }
+
+  .note {
+    background: var(--surface); border: 1px solid var(--rule);
+    border-left: 3px solid var(--accent); padding: 18px 20px; margin: 0 0 22px; font-size: 15.5px;
+  }
+  .note > *:last-child { margin-bottom: 0; }
+  .note.warn { border-left-color: var(--warn); background: var(--warn-bg); }
+  .note.crit { border-left-color: var(--crit); background: var(--crit-bg); }
+
+  .scroll { overflow-x: auto; margin: 0 0 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 420px; }
+  th {
+    text-align: left; font-family: "JetBrains Mono", monospace; font-size: 10px;
+    letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint);
+    font-weight: 400; padding: 0 12px 8px 0; border-bottom: 1px solid var(--rule);
+  }
+  td { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  td.num, th.num { font-family: "JetBrains Mono", monospace; text-align: right; padding-right: 0; }
+  code {
+    font-family: "JetBrains Mono", monospace; font-size: 13px;
+    background: var(--surface-2); padding: 2px 6px; border-radius: 2px;
+  }
+  .tags code { display: inline-block; margin: 0 4px 5px 0; }
+
+  .bad { color: var(--crit); }
+  .ok { color: var(--good); }
+
+  .idea { border: 1px solid var(--rule); background: var(--surface); padding: 18px 20px; margin-bottom: 12px; }
+  .idea h4 { margin: 0 0 6px; font-size: 15.5px; font-weight: 600; }
+  .idea p { margin: 0 0 8px; font-size: 15px; color: var(--ink-soft); }
+  .idea p:last-child { margin-bottom: 0; }
+  .idea .titr {
+    font-family: "JetBrains Mono", monospace; font-size: 12.5px;
+    color: var(--accent); display: block; margin-top: 8px;
+  }
+
+  footer {
+    margin-top: 70px; padding-top: 22px; border-top: 1px solid var(--rule);
+    font-size: 13.5px; color: var(--ink-faint); text-align: center; line-height: 1.7;
+  }
+  @media (max-width: 520px) {
+    .wrap { padding: 0 16px 70px; }
+    .copybox-head { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="kicker">A.L. cosmetology · перший тиждень</p>
+  <h1>Готові тексти</h1>
+  <p class="lede">Усе можна копіювати кнопкою й одразу вставляти. Де є вибір — позначено, який варіант раджу.</p>
+</header>
+
+<h2><span class="n">01</span>Поле «Ім'я» в Instagram</h2>
+<p class="hint">Це рядок під ніком. Instagram шукає людей саме за ним — тому там мають бути слова, які вводять клієнтки, а не прізвище.</p>
+
+<div class="copybox">
+  <div class="copybox-head"><span class="rec">★ раджу цей</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>Ботокс|Губи|Догляд за шкірою|Хмельницький</pre>
+</div>
+<div class="copybox">
+  <div class="copybox-head"><span>варіант — під дорожчі процедури</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>Ботокс|Губи|Біоревіталізація|Хмельницький</pre>
+</div>
+<div class="copybox">
+  <div class="copybox-head"><span>варіант — під проблеми, як у La Belle</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>Акне|Пігментація|Зморшки|Хмельницький</pre>
+</div>
+
+<p><strong>Чому перший.</strong> «Догляд за шкірою» шукають частіше, ніж «підбір догляду». «Ботокс» і «губи» — найдорожчі процедури, і саме їх вводять у пошук.</p>
+
+<h2><span class="n">02</span>Біо в Instagram</h2>
+<p class="hint">Зараз 101 символ зі 150 — є запас. Не використано головне: доказ кваліфікації. У біо Альони він є, у вас поки ні.</p>
+
+<div class="copybox">
+  <div class="copybox-head"><span class="rec">★ раджу цей</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>Косметолог з медичною освітою
+Ін'єкції · догляд · підбір косметики
+Роблю так, щоб результат не виглядав як робота
+📦 Доставка по Україні та світу</pre>
+</div>
+
+<div class="copybox">
+  <div class="copybox-head"><span>варіант із цифрами досвіду</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>Естетична та ін'єкційна косметологія
+[N] років практики · [N]+ клієнток щороку
+Підбираю догляд під вашу шкіру, а не з реклами
+📍 Хмельницький</pre>
+</div>
+
+<div class="note warn">
+  <p style="margin-bottom:0">Цифри вставляйте лише справжні. Якщо точної кількості клієнток немає — краще взяти перший варіант без чисел.</p>
+</div>
+
+<h2><span class="n">03</span>Біо в TikTok</h2>
+<p class="hint">Зараз посилання веде на Instagram — людина йде «дивитися далі» замість записатися. У TikTok 81 % ваших глядачів з України, це найцінніша аудиторія.</p>
+
+<div class="copybox">
+  <div class="copybox-head"><span class="rec">★ готове</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>Косметолог з медичною освітою · Хмельницький
+Розбираю косметику чесно: що працює, а що маркетинг
+Підбір догляду безкоштовно — напишіть «АНКЕТА»
+📦 Доставка по Україні та світу</pre>
+</div>
+
+<h2><span class="n">04</span>Хештеги</h2>
+
+<div class="note crit">
+  <p><strong>Instagram змінив ліміт: тепер максимум 5 хештегів.</strong> Усі старі поради про 15–30 більше не працюють.</p>
+  <p style="margin-bottom:0">У вас якраз 3–5 — кількість нормальна. Проблема інша: набір той самий у кожному пості вже рік. Він має мінятися під тему.</p>
+</div>
+
+<p><strong class="bad">Виправити насамперед:</strong> <code>#ботоксхмельницкий</code> написано російською. Правильно — <code class="ok">#ботоксхмельницький</code>.</p>
+
+<h3>Набори під теми</h3>
+<div class="scroll">
+<table>
+  <thead><tr><th>Тема</th><th>Набір</th></tr></thead>
+  <tbody>
+    <tr><td>Гумор / загальне</td><td class="tags"><code>#косметологхмельницький</code><code>#доглядзашкірою</code><code>#здоровашкіра</code><code>#хмельницький</code><code>#косметологукраїна</code></td></tr>
+    <tr><td>Ботокс, ін'єкції</td><td class="tags"><code>#ботоксхмельницький</code><code>#ін'єкційнакосметологія</code><code>#зморшки</code><code>#антивіковийдогляд</code><code>#косметологхмельницький</code></td></tr>
+    <tr><td>Губи</td><td class="tags"><code>#губихмельницький</code><code>#контурнапластика</code><code>#збільшеннягуб</code><code>#природнігуби</code><code>#косметологхмельницький</code></td></tr>
+    <tr><td>Розбір косметики</td><td class="tags"><code>#доглядзашкірою</code><code>#косметикаукраїна</code><code>#розбіркосметики</code><code>#щокупити</code><code>#косметолоградить</code></td></tr>
+    <tr><td>Акне</td><td class="tags"><code>#акне</code><code>#проблемнашкіра</code><code>#доглядприакне</code><code>#чистазмкіра</code><code>#косметологхмельницький</code></td></tr>
+    <tr><td>Сухість</td><td class="tags"><code>#сухашкіра</code><code>#зволоженняшкіри</code><code>#бар'єршкіри</code><code>#доглядзаобличчям</code><code>#косметологукраїна</code></td></tr>
+    <tr><td>Пігментація</td><td class="tags"><code>#пігментація</code><code>#вирівнюваннятону</code><code>#сонцезахист</code><code>#доглядзашкірою</code><code>#косметологхмельницький</code></td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2><span class="n">05</span>Автовідповіді в директ</h2>
+<p class="hint">Вмикаються так: Instagram → Налаштування → Повідомлення → Швидкі відповіді. Кожній дається коротке слово, і текст вставляється у два дотики.</p>
+
+<div class="note">
+  <p style="margin-bottom:0">Навіщо: про ціну питали <strong>190 разів</strong>, і ви писали суму вручну <strong>184 рази</strong>. Про запис — 220 разів. Ці відповіді заберуть у вас пів години один раз і повертатимуть години щотижня.</p>
+</div>
+
+<div class="copybox">
+  <div class="copybox-head"><span>слово: ціна</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>Доброго дня! 🤍
+Ось повний прайс: [посилання]
+
+Якщо не знайшли потрібне — напишіть, що саме цікавить, підкажу точну вартість.</pre>
+</div>
+
+<div class="copybox">
+  <div class="copybox-head"><span>слово: запис</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>Доброго дня! Записатися можна тут: [посилання]
+
+Або просто напишіть, який день і час вам зручні — підберу найближче вікно.</pre>
+</div>
+
+<div class="copybox">
+  <div class="copybox-head"><span>слово: адреса</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>Ми в IQ Center, [адреса, корпус, поверх].
+
+Маршрут: [посилання на карту]
+Орієнтир: [як зайти в потрібний корпус]</pre>
+</div>
+
+<div class="copybox">
+  <div class="copybox-head"><span>слово: анкета</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>Залюбки підберу вам догляд 🤍
+Заповніть коротку анкету — 8 питань, 3 хвилини: [посилання]
+
+Після неї надішлю схему саме під вашу шкіру: що вранці, що ввечері й чому саме це.</pre>
+</div>
+
+<div class="copybox">
+  <div class="copybox-head"><span>слово: боляче</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>Найчастіше питання 🙂
+
+Ін'єкції роблю з аплікаційною анестезією — відчувається як легкі поколювання.
+Ботокс переноситься найлегше, губи — трохи чутливіше.
+
+Після процедури можливий невеликий набряк, минає за [N] днів.</pre>
+</div>
+
+<div class="copybox">
+  <div class="copybox-head"><span>слово: доставка</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>Так, надсилаємо 📦
+По Україні — Нова Пошта, зазвичай 1–2 дні.
+За кордон — Нова Пошта Global або Meest.
+
+Напишіть, що саме потрібно, і я порахую вартість із доставкою.</pre>
+</div>
+
+<h2><span class="n">06</span>Як закривати розмови</h2>
+<p class="hint">У 72 % розмов останнє слово лишається за клієнткою. У 17 % розмов відповіді не було зовсім.</p>
+
+<p>Короткі фрази, які закривають діалог за п'ять секунд:</p>
+<ul>
+  <li>«Дякую, що написали 🤍 Якщо з'являться питання — я тут»</li>
+  <li>«Чекаємо вас! Якщо треба буде перенести — просто напишіть»</li>
+  <li>«Гарного дня! Будуть питання щодо догляду — пишіть у будь-який час»</li>
+</ul>
+
+<p>А на комплімент краще відповідати не «дякую ❤️», а питанням:</p>
+<ul>
+  <li>«Дякую 🤍 А ви вже пробували щось із цієї лінійки?»</li>
+  <li>«Дякую! Розкажіть, який у вас зараз догляд — підкажу, чого бракує»</li>
+</ul>
+
+<div class="note">
+  <p style="margin-bottom:0">Це не просто ввічливість. З березня 2026 <strong>двостороння розмова стала окремим сигналом для алгоритму</strong> — кожна відповідь із питанням підіймає пост.</p>
+</div>
+
+<h2><span class="n">07</span>Сценарій для TikTok: рейтинг</h2>
+<p class="hint">Формат, який у вас уже дав 510 905 переглядів. Середнє по семи таких відео — 100 065. Тривалість 2–4 хвилини: для TikTok це правильно.</p>
+
+<h3>Перші 3 секунди вирішують усе</h3>
+<p>Половина глядачів іде саме там. І якщо відео втратило половину за три секунди — воно вже не відновиться.</p>
+
+<p><strong class="bad">Не можна:</strong> «Привіт усім, сьогодні я хочу розповісти…»</p>
+<p><strong class="ok">Треба одразу з конфлікту:</strong></p>
+
+<div class="copybox">
+  <div class="copybox-head"><span>перша фраза</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>Цей крем коштує 3 000 гривень. І він гірший за той, що за 300. Розставляю від 1 до 10.</pre>
+</div>
+
+<div class="scroll">
+<table>
+  <thead><tr><th>Час</th><th>Що робити</th><th>Навіщо</th></tr></thead>
+  <tbody>
+    <tr><td class="num">0–3 с</td><td>Провокативна теза + найдорожчий продукт у кадрі</td><td>Утримати</td></tr>
+    <tr><td class="num">3–15 с</td><td>«Оцінюю склад, ціну і чи справді працює»</td><td>Рамка й довіра</td></tr>
+    <tr><td class="num">15 с – 3 хв</td><td>По продукту: назва → склад → вердикт → бал</td><td>Основа</td></tr>
+    <tr><td class="num">фінал</td><td>Номер один і чому саме він</td><td>Розв'язка</td></tr>
+    <tr><td class="num">–5 с</td><td>«Пишіть, який розібрати наступним»</td><td>Коментарі</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p><strong>Три правила, без яких не працює:</strong></p>
+<ul>
+  <li><strong>Оцініть один-два продукти низько.</strong> Якщо все «топ» — не вірять. Саме низька оцінка створює довіру до високих</li>
+  <li><strong>Називайте бал уголос</strong> — «сімка», «четвірка»</li>
+  <li><strong>Спершу оцінка, потім пояснення.</strong> Тоді глядач лишається дізнатися чому</li>
+</ul>
+
+<div class="copybox">
+  <div class="copybox-head"><span>опис під відео</span><button class="cbtn" data-copy>копіювати</button></div>
+  <pre>Розставляю креми для сухої шкіри від 1 до 10. Версія косметолога 💫
+Не погоджуєтесь? Пишіть у коментарях свій рейтинг 👇
+
+#доглядзашкірою #сухашкіра #косметологукраїна #розбіркосметики #щокупити</pre>
+</div>
+
+<h2><span class="n">08</span>Сценки для Instagram</h2>
+<p class="hint">Ваша сценка з чоловіком дала 137 854 перегляди. Тривалість 15–20 секунд — не 30–60, це найгірший діапазон для Instagram.</p>
+
+<div class="note crit">
+  <p style="margin-bottom:0"><strong>Обов'язково говорити в кадрі українською.</strong> Та вірусна сценка була без слів — тому Instagram рознiс її в Бразилію та Індонезію, і зі 137 тисяч переглядів прийшло п'ять підписників.</p>
+</div>
+
+<div class="idea">
+  <h4>Чоловік дізнається ціну догляду</h4>
+  <p>Вона перелічує засоби. Він рахує на калькуляторі. Фінальне обличчя.</p>
+  <span class="titr">Титр: «А потім питає, чому в мене шкіра краща 😌»</span>
+</div>
+
+<div class="idea">
+  <h4>Коли подруга просить порадити крем</h4>
+  <p>— Порадь щось для обличчя.<br>— Який тип шкіри?<br>— Ну… звичайний.</p>
+  <span class="titr">Титр: «Звичайного типу шкіри не існує 🙂»</span>
+</div>
+
+<div class="idea">
+  <h4>Чоловік користується моїм кремом</h4>
+  <p>Він мовчки бере найдорожчу баночку. Вона з жахом дивиться.</p>
+  <span class="titr">Титр: «Це на два місяці було»</span>
+</div>
+
+<div class="idea">
+  <h4>Клієнтка після процедури</h4>
+  <p>— Тільки нікому не кажіть, що я щось робила.<br>— Обіцяю.</p>
+  <span class="titr">Титр: «Найкращий комплімент — коли не помітно»</span>
+</div>
+
+<p><strong>Що спільного:</strong> упізнавана ситуація, двоє в кадрі, свій звук, жодної реклами.</p>
+
+<h2><span class="n">09</span>Три сторіс з інтерактивом</h2>
+<p class="hint">Зараз у сторіс жодного опитування, питання чи посилання. Тому їх бачать 5,8 % підписників замість нормальних 10–20 %.</p>
+
+<div class="idea">
+  <h4>Сторіс 1 — опитування</h4>
+  <p>Фото двох баночок. «Яку обрали б ви?» → «Ліву» / «Праву»</p>
+  <p>Наступною сторіс — відповідь, чому саме та.</p>
+</div>
+
+<div class="idea">
+  <h4>Сторіс 2 — повзунок</h4>
+  <p>«Наскільки чесно ви робите догляд щовечора?» 😴 ——— 🧴</p>
+</div>
+
+<div class="idea">
+  <h4>Сторіс 3 — наліпка з питанням</h4>
+  <p>«Спитайте будь-що про шкіру — відповім чесно»</p>
+  <p>Відповіді на неї — це готові теми для відео. Формат «Відповідь користувачу» у вашому TikTok зібрав 102 242 перегляди.</p>
+</div>
+
+<h2><span class="n">10</span>З чого почати — по хвилинах</h2>
+
+<div class="scroll">
+<table>
+  <thead><tr><th class="num">Час</th><th>Дія</th></tr></thead>
+  <tbody>
+    <tr><td class="num">2 хв</td><td>Виправити <code>#ботоксхмельницкий</code> на український варіант</td></tr>
+    <tr><td class="num">3 хв</td><td>Змінити геомітку на «Хмельницький» українською</td></tr>
+    <tr><td class="num">5 хв</td><td>Оновити біо</td></tr>
+    <tr><td class="num">5 хв</td><td>Вимкнути «Показувати рекомендації облікових записів» у налаштуваннях</td></tr>
+    <tr><td class="num">10 хв</td><td>Створити 6 швидких відповідей у директі</td></tr>
+    <tr><td class="num">15 хв</td><td>Зняти три сторіс з інтерактивом</td></tr>
+    <tr><td class="num">20 хв</td><td>Зняти одну сценку на 15–20 секунд</td></tr>
+    <tr><td class="num">40 хв</td><td>Зняти один рейтинг для TikTok</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Разом приблизно <strong>година сорок</strong>. З них 15 хвилин — разові налаштування, які більше не доведеться робити ніколи.</p>
+
+<footer>
+  Складено 1 вересня 2026 · тексти можна міняти під себе<br>
+  Місця у квадратних дужках заповнюємо після того, як буде прайс і адреса
+</footer>
+
+<script>
+  document.querySelectorAll('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var box = btn.closest('.copybox');
+      var txt = box ? box.querySelector('pre').innerText : '';
+      var done = function () {
+        btn.textContent = 'скопійовано';
+        btn.classList.add('done');
+        setTimeout(function () {
+          btn.textContent = 'копіювати';
+          btn.classList.remove('done');
+        }, 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(txt).then(done, function () { fallback(txt, done); });
+      } else {
+        fallback(txt, done);
+      }
+    });
+  });
+  function fallback(txt, done) {
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = txt;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      done();
+    } catch (e) { /* нічого не робимо — текст можна виділити вручну */ }
+  }
+</script>
+
+</div>
+</body>
+</html>
