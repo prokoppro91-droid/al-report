@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light dark">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Три напрями бренду</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Onest:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Commissioner:wght@300;400;500;600&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+  :root {
+    --paper:#F7F5F2; --surface:#FFFFFF; --ink:#26221E; --ink-soft:#5F5852; --ink-faint:#9A928A;
+    --rule:#E2DCD4; --accent:#8A6A4F;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:#16130F; --surface:#1F1B17; --ink:#F0EBE4; --ink-soft:#B5ADA3; --ink-faint:#877E74;
+      --rule:#332D26; --accent:#C69C74;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:#16130F; --surface:#1F1B17; --ink:#F0EBE4; --ink-soft:#B5ADA3; --ink-faint:#877E74;
+    --rule:#332D26; --accent:#C69C74;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: "Onest", system-ui, sans-serif; font-size: 16.5px; line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 24px 110px; }
+
+  header { padding: 76px 0 40px; text-align: center; border-bottom: 1px solid var(--rule); margin-bottom: 10px; }
+  .kicker { font-family:"JetBrains Mono",monospace; font-size:10.5px; letter-spacing:.22em;
+    text-transform:uppercase; color:var(--accent); margin:0 0 20px; }
+  h1 { font-family:"Cormorant Garamond",Georgia,serif; font-weight:600;
+    font-size:clamp(36px,6vw,58px); line-height:1.04; margin:0 0 18px; }
+  .lede { font-size:18px; color:var(--ink-soft); max-width:560px; margin:0 auto; font-weight:300; }
+
+  .dir { margin: 68px 0 0; }
+  .dir-head { display:flex; align-items:baseline; gap:14px; margin-bottom:6px; flex-wrap:wrap; }
+  .dir-num { font-family:"JetBrains Mono",monospace; font-size:11px; color:var(--accent); letter-spacing:.1em; }
+  .dir-name { font-family:"Cormorant Garamond",Georgia,serif; font-size:clamp(27px,4vw,38px); font-weight:600; line-height:1.1; }
+  .dir-desc { color:var(--ink-soft); font-size:16px; margin:0 0 26px; max-width:620px; }
+
+  .board { border:1px solid var(--rule); overflow:hidden; margin-bottom:16px; }
+  .board-row { display:grid; }
+  .lock { padding:52px 36px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:26px; }
+  .lock-note { font-family:"JetBrains Mono",monospace; font-size:9.5px; letter-spacing:.16em;
+    text-transform:uppercase; opacity:.5; }
+
+  .grid3 { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); }
+  .cell { padding:26px 20px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; min-height:170px; }
+  .cell-l { font-family:"JetBrains Mono",monospace; font-size:9px; letter-spacing:.15em; text-transform:uppercase; opacity:.45; }
+
+  .avatar { width:86px; height:86px; border-radius:50%; display:flex; align-items:center; justify-content:center; }
+  .hl { width:74px; height:74px; border-radius:50%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; }
+  .hl-ic { font-size:19px; line-height:1 }
+  .hl-w { font-size:11px; letter-spacing:.02em }
+
+  .post { aspect-ratio:4/5; padding:26px; display:flex; flex-direction:column; }
+  .post-eb { font-family:"JetBrains Mono",monospace; font-size:8.5px; letter-spacing:.2em; text-transform:uppercase; opacity:.6; margin-bottom:auto; }
+  .post-h { font-size:28px; line-height:1.14; }
+  .post-f { margin-top:16px; font-family:"JetBrains Mono",monospace; font-size:8.5px; letter-spacing:.16em; text-transform:uppercase; opacity:.55; }
+
+  .pal { display:flex; height:56px; }
+  .pal i { flex:1; position:relative; }
+  .pal i span { position:absolute; bottom:5px; left:0; right:0; text-align:center;
+    font-family:"JetBrains Mono",monospace; font-size:8px; opacity:.55; }
+
+  .meta { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:20px; margin:20px 0 0; font-size:15px; }
+  .meta h4 { margin:0 0 6px; font-size:13.5px; font-weight:600; }
+  .meta p { margin:0; color:var(--ink-soft); font-size:14.5px; line-height:1.5; }
+  .meta .mono { font-family:"JetBrains Mono",monospace; font-size:12.5px; }
+
+  .why { background:var(--surface); border:1px solid var(--rule); border-left:3px solid var(--accent);
+    padding:18px 22px; margin:18px 0 0; font-size:15px; }
+  .why b { font-weight:600 }
+  .why p { margin:0 0 8px } .why p:last-child { margin:0 }
+
+  h2 { font-family:"Cormorant Garamond",Georgia,serif; font-weight:600; font-size:clamp(26px,3.8vw,36px); margin:0 0 8px; }
+  .sub { font-family:"JetBrains Mono",monospace; font-size:10px; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink-faint); margin:0 0 24px; }
+  section { margin:72px 0 0 }
+  p { margin:0 0 17px }
+  ul { padding-left:22px; margin:0 0 17px } li { margin-bottom:8px } li::marker { color:var(--accent) }
+
+  .scroll { overflow-x:auto; margin:0 0 22px }
+  table { width:100%; border-collapse:collapse; font-size:15px; min-width:440px }
+  th { text-align:left; font-family:"JetBrains Mono",monospace; font-size:10px; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--ink-faint); font-weight:400; padding:0 14px 9px 0; border-bottom:1px solid var(--rule) }
+  td { padding:11px 14px 11px 0; border-bottom:1px solid var(--rule); vertical-align:top }
+
+  footer { margin-top:80px; padding-top:24px; border-top:1px solid var(--rule);
+    font-size:13.5px; color:var(--ink-faint); text-align:center; line-height:1.7 }
+  @media (max-width:560px){ .wrap{padding:0 16px 70px} .lock{padding:38px 20px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="kicker">A.L. cosmetology · вибір напряму</p>
+  <h1>Три напрями бренду</h1>
+  <p class="lede">Логотипу ще немає — тому почнімо з нього. Ось три різні світи, у кожному той самий знак, той самий пост і та сама обкладинка. Обирайте той, у якому впізнаєте себе.</p>
+</header>
+
+<!-- ============ НАПРЯМ 1 ============ -->
+<div class="dir">
+  <div class="dir-head"><span class="dir-num">01</span><h2 class="dir-name">Теплий мінімалізм</h2></div>
+  <p class="dir-desc">Пісок, молоко, тепла графітова темрява. Багато повітря, тонкі лінії, нічого зайвого. Так виглядають бренди, які не кричать про ціну — і саме тому здаються дорогими.</p>
+
+  <div class="board" style="background:#FAF7F2">
+    <div class="lock" style="background:#FAF7F2; color:#2E2A26">
+      <div style="text-align:center">
+        <div style="font-family:'Cormorant Garamond',serif; font-size:58px; letter-spacing:.22em; line-height:1; font-weight:400; text-indent:.22em">A·L</div>
+        <div style="width:66px; height:1px; background:#B8956A; margin:16px auto"></div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:.42em; text-indent:.42em; opacity:.6">COSMETOLOGY</div>
+      </div>
+      <span class="lock-note">основний логотип</span>
+    </div>
+
+    <div class="grid3" style="border-top:1px solid #E6DFD5">
+      <div class="cell" style="background:#FAF7F2; border-right:1px solid #E6DFD5">
+        <div class="avatar" style="background:#2E2A26; color:#FAF7F2">
+          <span style="font-family:'Cormorant Garamond',serif; font-size:27px; letter-spacing:.14em; text-indent:.14em">A·L</span>
+        </div>
+        <span class="cell-l" style="color:#2E2A26">аватарка</span>
+      </div>
+      <div class="cell" style="background:#EDE6DC; border-right:1px solid #E0D7CB">
+        <div style="display:flex; gap:10px">
+          <div class="hl" style="background:#FAF7F2; color:#2E2A26"><span class="hl-ic">💰</span><span class="hl-w" style="font-family:'Cormorant Garamond',serif">Ціни</span></div>
+          <div class="hl" style="background:#2E2A26; color:#FAF7F2"><span class="hl-ic">💋</span><span class="hl-w" style="font-family:'Cormorant Garamond',serif">Губи</span></div>
+        </div>
+        <span class="cell-l" style="color:#2E2A26">хайлайти</span>
+      </div>
+      <div class="cell" style="background:#FAF7F2; padding:0">
+        <div class="post" style="background:#EDE6DC; color:#2E2A26; width:100%">
+          <p class="post-eb">рубрика</p>
+          <p class="post-h" style="font-family:'Cormorant Garamond',serif">Топ-3 креми<br>для <em>сухої шкіри</em></p>
+          <p class="post-f">версія косметолога</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pal">
+      <i style="background:#FAF7F2"><span style="color:#2E2A26">FAF7F2</span></i>
+      <i style="background:#EDE6DC"><span style="color:#2E2A26">EDE6DC</span></i>
+      <i style="background:#B8956A"><span style="color:#FAF7F2">B8956A</span></i>
+      <i style="background:#6B5D4F"><span style="color:#FAF7F2">6B5D4F</span></i>
+      <i style="background:#2E2A26"><span style="color:#FAF7F2">2E2A26</span></i>
+    </div>
+  </div>
+
+  <div class="meta">
+    <div><h4>Шрифти</h4><p class="mono">Cormorant Garamond<br>Onest</p></div>
+    <div><h4>Настрій</h4><p>Спокій, теплота, дорого без пафосу</p></div>
+    <div><h4>Кому підійде</h4><p>Догляд, підбір косметики, довготривалі стосунки з клієнткою</p></div>
+  </div>
+
+  <div class="why">
+    <p><b>Сильна сторона:</b> найкраще працює на фото. Тепла бежева гама не сперечається з кольором шкіри, тому знімки процедур і засобів виглядають природно.</p>
+    <p><b>Слабка:</b> у стрічці серед яскравих постів може загубитися. Треба сильні заголовки, щоб зупиняти погляд.</p>
+  </div>
+</div>
+
+<!-- ============ НАПРЯМ 2 ============ -->
+<div class="dir">
+  <div class="dir-head"><span class="dir-num">02</span><h2 class="dir-name">Глибокий смарагд</h2></div>
+  <p class="dir-desc">Темна насичена основа, кремовий текст, тонке золото. Контраст, який зупиняє гортання. Так виглядають клініки й марки, що працюють із дорогими процедурами.</p>
+
+  <div class="board" style="background:#1F3A32">
+    <div class="lock" style="background:#1F3A32; color:#F5EFE3">
+      <div style="text-align:center">
+        <div style="font-family:'Playfair Display',serif; font-size:56px; letter-spacing:.14em; line-height:1; font-weight:500; text-indent:.14em">A·L</div>
+        <div style="width:80px; height:1px; background:#C9A961; margin:15px auto"></div>
+        <div style="font-family:'Commissioner',sans-serif; font-size:8.5px; letter-spacing:.44em; text-indent:.44em; opacity:.7; font-weight:300">COSMETOLOGY</div>
+      </div>
+      <span class="lock-note">основний логотип</span>
+    </div>
+
+    <div class="grid3" style="border-top:1px solid #2C4A41">
+      <div class="cell" style="background:#1F3A32; border-right:1px solid #2C4A41">
+        <div class="avatar" style="background:#F5EFE3; color:#1F3A32">
+          <span style="font-family:'Playfair Display',serif; font-size:26px; letter-spacing:.1em; text-indent:.1em; font-weight:500">A·L</span>
+        </div>
+        <span class="cell-l" style="color:#F5EFE3">аватарка</span>
+      </div>
+      <div class="cell" style="background:#162C25; border-right:1px solid #2C4A41">
+        <div style="display:flex; gap:10px">
+          <div class="hl" style="background:#1F3A32; color:#C9A961; border:1px solid #C9A961"><span class="hl-ic">💰</span><span class="hl-w" style="font-family:'Playfair Display',serif">Ціни</span></div>
+          <div class="hl" style="background:#F5EFE3; color:#1F3A32"><span class="hl-ic">💋</span><span class="hl-w" style="font-family:'Playfair Display',serif">Губи</span></div>
+        </div>
+        <span class="cell-l" style="color:#F5EFE3">хайлайти</span>
+      </div>
+      <div class="cell" style="background:#1F3A32; padding:0">
+        <div class="post" style="background:#162C25; color:#F5EFE3; width:100%">
+          <p class="post-eb" style="color:#C9A961; opacity:1">рубрика</p>
+          <p class="post-h" style="font-family:'Playfair Display',serif">Топ-3 креми<br>для <em style="color:#C9A961">сухої шкіри</em></p>
+          <p class="post-f">версія косметолога</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pal">
+      <i style="background:#F5EFE3"><span style="color:#1F3A32">F5EFE3</span></i>
+      <i style="background:#C9A961"><span style="color:#1F3A32">C9A961</span></i>
+      <i style="background:#4E7A6B"><span style="color:#F5EFE3">4E7A6B</span></i>
+      <i style="background:#1F3A32"><span style="color:#F5EFE3">1F3A32</span></i>
+      <i style="background:#162C25"><span style="color:#F5EFE3">162C25</span></i>
+    </div>
+  </div>
+
+  <div class="meta">
+    <div><h4>Шрифти</h4><p class="mono">Playfair Display<br>Commissioner</p></div>
+    <div><h4>Настрій</h4><p>Упевненість, вагомість, преміальність</p></div>
+    <div><h4>Кому підійде</h4><p>Ін'єкції, дорогі процедури, ставка на верхній сегмент</p></div>
+  </div>
+
+  <div class="why">
+    <p><b>Сильна сторона:</b> найпомітніший у стрічці. Темний пост серед світлих зупиняє палець — це реальна перевага для охоплення.</p>
+    <p><b>Слабка:</b> вимагає дисципліни. Одне фото з іншим фоном руйнує враження. І з такою гамою складніше показувати «живі» побутові кадри.</p>
+  </div>
+</div>
+
+<!-- ============ НАПРЯМ 3 ============ -->
+<div class="dir">
+  <div class="dir-head"><span class="dir-num">03</span><h2 class="dir-name">Світлий клінічний</h2></div>
+  <p class="dir-desc">Білий, м'ята, чітка геометрія без засічок. Підкреслює медичну освіту й безпеку. Так виглядають бренди, яким вірять на слово.</p>
+
+  <div class="board" style="background:#FFFFFF">
+    <div class="lock" style="background:#FFFFFF; color:#1A2421">
+      <div style="text-align:center">
+        <div style="font-family:'Manrope',sans-serif; font-size:46px; letter-spacing:.2em; line-height:1; font-weight:600; text-indent:.2em">A.L</div>
+        <div style="width:54px; height:2px; background:#5B8A76; margin:16px auto"></div>
+        <div style="font-family:'Manrope',sans-serif; font-size:8.5px; letter-spacing:.4em; text-indent:.4em; font-weight:500; opacity:.55">COSMETOLOGY</div>
+      </div>
+      <span class="lock-note">основний логотип</span>
+    </div>
+
+    <div class="grid3" style="border-top:1px solid #E7EDEA">
+      <div class="cell" style="background:#FFFFFF; border-right:1px solid #E7EDEA">
+        <div class="avatar" style="background:#1A2421; color:#FFFFFF">
+          <span style="font-family:'Manrope',sans-serif; font-size:23px; letter-spacing:.14em; text-indent:.14em; font-weight:600">A.L</span>
+        </div>
+        <span class="cell-l" style="color:#1A2421">аватарка</span>
+      </div>
+      <div class="cell" style="background:#E8F0EC; border-right:1px solid #DCE6E1">
+        <div style="display:flex; gap:10px">
+          <div class="hl" style="background:#FFFFFF; color:#1A2421"><span class="hl-ic">💰</span><span class="hl-w" style="font-family:'Manrope',sans-serif; font-weight:500">Ціни</span></div>
+          <div class="hl" style="background:#5B8A76; color:#FFFFFF"><span class="hl-ic">💋</span><span class="hl-w" style="font-family:'Manrope',sans-serif; font-weight:500">Губи</span></div>
+        </div>
+        <span class="cell-l" style="color:#1A2421">хайлайти</span>
+      </div>
+      <div class="cell" style="background:#FFFFFF; padding:0">
+        <div class="post" style="background:#E8F0EC; color:#1A2421; width:100%">
+          <p class="post-eb" style="color:#5B8A76; opacity:1">рубрика</p>
+          <p class="post-h" style="font-family:'Manrope',sans-serif; font-weight:600; font-size:25px; letter-spacing:-.01em">Топ-3 креми<br>для <span style="color:#5B8A76">сухої шкіри</span></p>
+          <p class="post-f">версія косметолога</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pal">
+      <i style="background:#FFFFFF"><span style="color:#1A2421">FFFFFF</span></i>
+      <i style="background:#E8F0EC"><span style="color:#1A2421">E8F0EC</span></i>
+      <i style="background:#5B8A76"><span style="color:#FFFFFF">5B8A76</span></i>
+      <i style="background:#3A4B45"><span style="color:#FFFFFF">3A4B45</span></i>
+      <i style="background:#1A2421"><span style="color:#FFFFFF">1A2421</span></i>
+    </div>
+  </div>
+
+  <div class="meta">
+    <div><h4>Шрифт</h4><p class="mono">Manrope<br>(один, різна товщина)</p></div>
+    <div><h4>Настрій</h4><p>Чистота, безпека, професія</p></div>
+    <div><h4>Кому підійде</h4><p>Акцент на медичній освіті, робота з проблемною шкірою</p></div>
+  </div>
+
+  <div class="why">
+    <p><b>Сильна сторона:</b> найшвидший у роботі. Один шрифт, прості форми — макети робляться за хвилини, помилитися складно.</p>
+    <p><b>Слабка:</b> найближчий до того, як виглядають усі медичні акаунти. Менше характеру, більше ризику злитися з конкурентами.</p>
+  </div>
+</div>
+
+<!-- ============ ПОРІВНЯННЯ ============ -->
+<section>
+  <h2>Як обрати</h2>
+  <p class="sub">коротко про різницю</p>
+
+  <div class="scroll">
+    <table>
+      <thead><tr><th></th><th>Теплий</th><th>Смарагд</th><th>Клінічний</th></tr></thead>
+      <tbody>
+        <tr><td>Помітність у стрічці</td><td>середня</td><td><strong>найвища</strong></td><td>середня</td></tr>
+        <tr><td>Простота в роботі</td><td>висока</td><td>потребує дисципліни</td><td><strong>найвища</strong></td></tr>
+        <tr><td>Як лягає на фото шкіри</td><td><strong>найкраще</strong></td><td>складніше</td><td>добре</td></tr>
+        <tr><td>Відчуття ціни</td><td>дорого спокійно</td><td><strong>дорого явно</strong></td><td>помірно</td></tr>
+        <tr><td>Схожість на конкурентів міста</td><td>низька</td><td><strong>найнижча</strong></td><td>висока</td></tr>
+        <tr><td>Підходить під «природний результат»</td><td><strong>так</strong></td><td>частково</td><td>так</td></tr>
+        <tr><td>Підходить під «чесний розбір»</td><td>так</td><td>так</td><td><strong>так</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="why">
+    <p><b>Якщо коротко.</b> Смарагд дасть найбільше уваги в стрічці, але вимагає, щоб кожне фото було витримане. Теплий найкраще поєднується з живими знімками шкіри й засобів — а це основа вашого контенту. Клінічний найпростіший, але найменш помітний серед інших косметологів.</p>
+    <p style="margin-bottom:0">Моя порада — <b>теплий мінімалізм</b>, із однією поправкою: зробити темні пости частішими, щоб узяти помітність від смарагдового напряму. Тоді стрічка чергується світлим і темним, і це саме по собі виглядає впорядковано.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Що буде далі</h2>
+  <p class="sub">після вибору</p>
+  <p>Щойно ви оберете напрям, я зроблю:</p>
+  <ul>
+    <li><strong>Логотип у файлах</strong> — для аватарки, для світлого й темного фону, для друку</li>
+    <li><strong>Повний брендбук</strong> — кольори, шрифти, голос, правила, приклади</li>
+    <li><strong>Десять обкладинок хайлайтів</strong> — готові до завантаження</li>
+    <li><strong>Шаблони постів</strong> — під кожну рубрику</li>
+    <li><strong>Анімовані відео</strong> — інтро, титри, анімовані рейтинги</li>
+    <li><strong>Матеріали для реклами</strong> — тексти оголошень і покрокове налаштування</li>
+  </ul>
+  <p>Логотип можна буде змінити й пізніше, але краще визначитися зараз — бо все інше будується на ньому.</p>
+</section>
+
+<footer>
+  Три напрями · вересень 2026<br>
+  У кожному — той самий знак, пост і обкладинка, щоб порівняння було чесним
+</footer>
+
+</div>
+</body>
+</html>
